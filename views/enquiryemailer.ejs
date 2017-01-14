@@ -13,10 +13,7 @@
     td{
       padding: 0 15px;
     }
-    .bullet{
-      padding: 20px 0px;
 
-    }
     .bullet:before{
     content: "•";
     font-size: 26px;
@@ -33,7 +30,7 @@
   <tbody>
             <tr>
               <td>
-                <img src="img/logo.png" style="display: block;background: #fff;vertical-align: top;margin:0 auto;">
+                <img src="" style="display: block;background: #fff;vertical-align: top;margin:0 auto;">
               </td>
             </tr>
             <tr>
@@ -46,7 +43,7 @@
 <p><span>Name</span> :<%= content.name    %> </p>
 <p><span>Mobile Number</span> : <%= content.mobile    %></p>
 <p><span>Email Address</span> : <%= content.email    %></p>
-<p class="bullet"> <%=content.enquiryFor%></p>
+<p style="padding: 20px 0px; vertical-align: middle;margin-right: 5px;"> &bull; <%=content.enquiryFor%></p>
 <p><span>Message</span> :<%= content.message    %>
 </p>
               </td>
