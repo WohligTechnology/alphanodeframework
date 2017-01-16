@@ -1,0 +1,58 @@
+{
+    "title": "Careers",
+    "description": "List of Careers",
+    "pageType": "view",
+    "sendIdWithCreate": true,
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Name",
+        "isSort": "",
+        "tableRef": "name"
+    }, {
+        "name": "Email",
+        "isSort": "",
+        "tableRef": "email"
+    }, {
+        "name": "Mobile",
+        "isSort": "",
+        "tableRef": "mobile"
+    },
+    {
+        "name": "Message",
+        "isSort": "",
+        "tableRef": "message"
+    }],
+    "action": [{
+        "name": "edit",
+        "icon": "fa-pencil",
+        "buttonClass": "btn-primary",
+        "type": "page",
+        "action": "editCareers",
+        "fieldsToSend": {
+            "_id": "_id"
+        }
+    }, {
+        "name": "delete",
+        "icon": "fa-trash",
+        "buttonClass": "btn-danger",
+        "type": "apiCallConfirm",
+        "title": "Delete Careers",
+        "content": "Are you sure you want to delete Careers?",
+        "api": "Careers/delete",
+        "fieldsToSend": {
+            "name": "_id",
+            "value": "_id"
+        }
+    }],
+    "button": [ {
+        "name": "Create",
+        "icon": "plus",
+        "class": "btn-success",
+        "type": "page",
+        "action": "createCareers"
+    }],
+    "apiCall": {
+        "url": "Careers/search",
+        "params": "_id"
+    }
+}

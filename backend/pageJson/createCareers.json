@@ -1,0 +1,77 @@
+{
+    "title": "Create Careers",
+    "name": "Careers",
+    "jsonPage": "viewCareers",
+    "desciption": "",
+    "pageType": "create",
+    "urlFields": ["Careers"],
+    "fields": [{
+            "name": "Name",
+            "type": "text",
+            "tableRef": "name",
+            "placeholder": "Enter Name",
+            "id": "name",
+            "validation": ["", "trim", ""],
+            "url": ""
+        }, {
+            "name": "Email",
+            "type": "text",
+            "tableRef": "email",
+            "placeholder": "Enter Email",
+            "id": "email",
+            "validation": ["", "trim", ""],
+            "url": ""
+        },
+
+        {
+            "name": "Resume",
+            "type": "file",
+            "tableRef": "resume",
+            "option": "single",
+            "placeholder": "Enter Resume",
+            "id": "",
+            "url": ""
+        },
+        {
+            "name": "Mobile",
+            "type": "text",
+            "tableRef": "mobile",
+            "placeholder": "Enter mobile",
+            "id": "mobile",
+            "validation": ["", "trim", ""],
+            "url": ""
+        },
+
+        {
+            "name": "Message",
+            "type": "text",
+            "tableRef": "message",
+            "placeholder": "Enter Message",
+            "id": "message",
+            "validation": ["", "trim", ""],
+            "url": ""
+        }
+    ],
+    "action": [{
+        "name": "submit",
+        "action": "submitCareers",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewCareers"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewCareers"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Careers/save"
+    }
+}

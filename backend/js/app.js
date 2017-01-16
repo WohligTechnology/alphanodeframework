@@ -227,8 +227,8 @@ firstapp.directive('uploadImage', function ($http, $filter, $timeout) {
                         'Content-Type': undefined
                     },
                     transformRequest: angular.identity
-                }).success(function (data) {
-
+                }).then(function (data) {
+                    data=data.data;
                     $scope.uploadStatus = "uploaded";
                     if ($scope.isMultiple) {
 
