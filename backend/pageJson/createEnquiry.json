@@ -31,17 +31,14 @@
             "validation": ["", "trim", ""],
             "url": ""
         },
-        {
-            "name": "Enquiry for",
-            "type": "tags",
+           {
+            "name": "Enquiry For",
+            "type": "text",
             "tableRef": "enquiryFor",
-            "placeholder": "Enter Enquiry for",
-            "id": "status",
-            "validation": ["", "", ""],
-            "url": "",
-            "dropDownField": "",
-            "dropDownType": "single",
-            "dropDown": ["PP/PE Liners", "POF Shrink Film", "PET Bottles", "Speciality Films"]
+            "placeholder": "Enter Enquiry For",
+            "id": "enquiryFor",
+            "validation": ["", "trim", ""],
+            "url": ""
         },
         {
             "name": "Message",

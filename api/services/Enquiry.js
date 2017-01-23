@@ -4,12 +4,7 @@ var schema = new Schema({
     name: String,
     mobile: String,
     email:  String,
-
-
-     enquiryFor: {
-        type: String,
-        enum: ["PP/PE Liners", "POF Shrink Film", "PET Bottles", "Speciality Films"]
-    },
+     enquiryFor: String,
     message: String
 });
 

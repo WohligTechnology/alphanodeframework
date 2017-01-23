@@ -7,6 +7,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Dashboard");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+     $state.go("page",{
+         id:"viewEnquiry"
+     });
 })
 
 
@@ -322,6 +325,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             }, ++i,
             function (data, ini) {
                 if (ini == i) {
+                    console.log(data);
                     $scope.items = data.data.results;
                     $scope.totalItems = data.data.total;
                     $scope.maxRow = data.data.options.count;

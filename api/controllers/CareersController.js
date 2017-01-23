@@ -13,6 +13,17 @@ sendCareersEmail: function (req, res) {
                 data: "Invalid Request"
             });
         }
+    }  ,
+    findAllReverse: function (req, res) {
+        if (req.body) {
+            console.log("CNTRL", req.body);
+            Careers.findAllReverse(req.body, res.callback);
+        } else {
+            res.json({
+                value: false,
+                data: "Invalid Request"
+            });
+        }
     }
 
 };
