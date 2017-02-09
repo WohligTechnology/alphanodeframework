@@ -1,6 +1,6 @@
 {
-    "title": "Journey",
-    "description": "List of Journey",
+    "title": "About Us",
+    "description": "List of About Us",
     "pageType": "view",
     "sendIdWithCreate": true,
     "urlFields": ["_id"],
@@ -9,14 +9,10 @@
         "isSort": "",
         "tableRef": "name"
     }, {
-        "name": "Journey Image",
+        "name": "AboutUs Image",
         "type": "image",
         "isSort": "",
-        "tableRef": "journeyimage"
-    }, {
-        "name": "Order",
-        "isSort": "",
-        "tableRef": "order"
+        "tableRef": "image"
     }, {
         "name": "Status",
         "isSort": "",
@@ -27,7 +23,7 @@
         "icon": "fa-pencil",
         "buttonClass": "btn-primary",
         "type": "page",
-        "action": "editJourney",
+        "action": "editAboutUs",
         "fieldsToSend": {
             "_id": "_id"
         }
@@ -36,9 +32,9 @@
         "icon": "fa-trash",
         "buttonClass": "btn-danger",
         "type": "apiCallConfirm",
-        "title": "Delete Journey",
-        "content": "Are you sure you want to delete Journey?",
-        "api": "Journey/delete",
+        "title": "Delete AboutUs",
+        "content": "Are you sure you want to delete AboutUs?",
+        "api": "AboutUs/delete",
         "fieldsToSend": {
             "name": "_id",
             "value": "_id"
@@ -49,10 +45,10 @@
         "icon": "plus",
         "class": "btn-success",
         "type": "page",
-        "action": "createJourney"
+        "action": "createAboutUs"
     }],
     "apiCall": {
-        "url": "Journey/search",
+        "url": "AboutUs/search",
         "params": "_id"
     }
 }

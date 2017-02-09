@@ -15,7 +15,7 @@
         "tableRef": "logo"
     }, {
         "name": "Order",
-        "type": "Number",
+
         "isSort": "",
         "tableRef": "order"
     }, {
@@ -23,13 +23,9 @@
         "isSort": "",
         "tableRef": "status"
     }, {
-        "name": "Content",
-        "isSort": "",
-        "tableRef": "content"
-    }, {
         "name": "url",
         "isSort": "",
-        "tableRef": "url"
+        "tableRef": "link"
     }],
     "action": [{
         "name": "edit",

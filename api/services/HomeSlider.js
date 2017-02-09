@@ -9,8 +9,7 @@ var schema = new Schema({
         type: String
     },
     order: {
-        type: Number,
-        default: 0
+        type: Number
     },
     status: {
         type: String,

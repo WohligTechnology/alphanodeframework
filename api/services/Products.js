@@ -1,18 +1,18 @@
 var schema = new Schema({
     industries: {
-        type: String,
+        type: Number,
         default: ""
     },
     polymer: {
-        type: String,
+        type: Number,
         default: ""
     },
     technologies: {
-        type: String,
+        type: Number,
         default: ""
     },
     employees: {
-        type: String,
+        type: Number,
         default: ""
     },
 });

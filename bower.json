@@ -63,9 +63,6 @@
     "ui-router": "latest",
     "tinymce": "4.3.12",
     "angular-ui-swiper": "^2.3.6"
-  },
-  "resolutions": {
-    "jStorage": "v0.4.10",
-    "angular": "1.5.8"
   }
+  
 }
