@@ -1,0 +1,67 @@
+{
+    "title": "Latest News",
+    "description": "List of LatestNews",
+    "pageType": "view",
+    "sendIdWithCreate": true,
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Name",
+        "isSort": "",
+        "tableRef": "name"
+    }, {
+        "name": "Logo",
+        "type": "image",
+        "isSort": "",
+        "tableRef": "logo"
+    }, {
+        "name": "Order",
+        "type": "Number",
+        "isSort": "",
+        "tableRef": "order"
+    }, {
+        "name": "Status",
+        "isSort": "",
+        "tableRef": "status"
+    }, {
+        "name": "Content",
+        "isSort": "",
+        "tableRef": "content"
+    }, {
+        "name": "url",
+        "isSort": "",
+        "tableRef": "url"
+    }],
+    "action": [{
+        "name": "edit",
+        "icon": "fa-pencil",
+        "buttonClass": "btn-primary",
+        "type": "page",
+        "action": "editLatestNews",
+        "fieldsToSend": {
+            "_id": "_id"
+        }
+    }, {
+        "name": "delete",
+        "icon": "fa-trash",
+        "buttonClass": "btn-danger",
+        "type": "apiCallConfirm",
+        "title": "Delete LatestNews",
+        "content": "Are you sure you want to delete LatestNews?",
+        "api": "LatestNews/delete",
+        "fieldsToSend": {
+            "name": "_id",
+            "value": "_id"
+        }
+    }],
+    "button": [{
+        "name": "Create",
+        "icon": "plus",
+        "class": "btn-success",
+        "type": "page",
+        "action": "createLatestNews"
+    }],
+    "apiCall": {
+        "url": "LatestNews/search",
+        "params": "_id"
+    }
+}

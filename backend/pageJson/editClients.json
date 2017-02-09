@@ -1,0 +1,76 @@
+{
+    "title": "Edit Clients",
+    "jsonPage": "viewClients",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Name",
+        "type": "text",
+        "tableRef": "name",
+        "placeholder": "Enter Name",
+        "id": "input1",
+        "model": "name",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Logo",
+        "type": "image",
+        "tableRef": "logo",
+        "option": "single",
+        "size": "213 x 146",
+        "placeholder": "Enter Logo",
+        "id": "input1",
+        "model": "logo",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Order",
+        "type": "text",
+        "tableRef": "order",
+        "placeholder": "Enter Order",
+        "id": "input1",
+        "model": "order",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Status",
+        "type": "tags",
+        "tableRef": "status",
+        "placeholder": "Enter status",
+        "id": "status",
+        "validation": ["", "trim", ""],
+        "url": "",
+        "dropDownField": "",
+        "dropDownType": "single",
+        "onView": true,
+        "dropDown": ["true", "false"]
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitClients",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewClients"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewClients"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Clients/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "Clients/getOne",
+        "params": "_id"
+    }
+}

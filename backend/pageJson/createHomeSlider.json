@@ -1,0 +1,92 @@
+{
+    "title": "Create HomeSlider",
+    "name": "HomeSlider",
+    "jsonPage": "viewHomeSlider",
+    "desciption": "",
+    "pageType": "create",
+    "urlFields": ["HomeSlider"],
+    "fields": [{
+        "name": "Desktop Image",
+        "type": "image",
+        "tableRef": "desktopimage",
+        "option": "single",
+        "size": "1600 x 900px",
+        "placeholder": "Enter Desktop Image",
+        "id": "input1",
+        "validation": ["", "trim", ""],
+        "url": ""
+    }, {
+        "name": "Mobile Image",
+        "type": "image",
+        "tableRef": "mobileimage",
+        "option": "single",
+        "size": "705 x 1087px",
+        "placeholder": "Enter Mobile Image",
+        "id": "input1",
+        "validation": ["", "trim", ""],
+        "url": ""
+    },{
+        "name": "IPad Image",
+        "type": "image",
+        "tableRef": "ipadimage",
+        "option": "single",
+        "size": "705 x 1087px",
+        "placeholder": "Enter Ipad Image",
+        "id": "input1",
+        "validation": ["", "trim", ""],
+        "url": ""
+    },
+     {
+        "name": "URL",
+        "type": "text",
+        "tableRef": "url",
+        "placeholder": "Enter URL",
+        "id": "input1",
+        "validation": ["", "trim", ""],
+        "url": ""
+    }, {
+        "name": "Order",
+        "type": "text",
+        "tableRef": "order",
+        "placeholder": "Enter Order",
+        "id": "input1",
+        "validation": ["", "trim", ""],
+        "url": ""
+    }, {
+        "name": "Status",
+        "type": "tags",
+        "tableRef": "status",
+        "placeholder": "Enter status",
+        "id": "status",
+        "validation": ["",
+            "trim", ""
+        ],
+        "url": "",
+        "dropDownField": "",
+        "dropDownType": "single",
+        "onView": true,
+        "dropDown": ["true", "false"]
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitWhatsHot",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewHomeSlider"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewHomeSlider"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "HomeSlider/save"
+    }
+}

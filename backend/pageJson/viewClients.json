@@ -1,0 +1,59 @@
+{
+    "title": "Clients",
+    "description": "List of Clients",
+    "pageType": "view",
+    "sendIdWithCreate": true,
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Name",
+        "type": "text",
+        "isSort": "",
+        "tableRef": "name"
+    }, {
+        "name": "Order",
+        "isSort": "",
+        "tableRef": "order"
+    }, {
+        "name": "Logo",
+        "type": "image",
+        "isSort": "",
+        "tableRef": "logo"
+    }, {
+        "name": "Status",
+        "isSort": "",
+        "tableRef": "status"
+    }],
+    "action": [{
+        "name": "edit",
+        "icon": "fa-pencil",
+        "buttonClass": "btn-primary",
+        "type": "page",
+        "action": "editClients",
+        "fieldsToSend": {
+            "_id": "_id"
+        }
+    }, {
+        "name": "delete",
+        "icon": "fa-trash",
+        "buttonClass": "btn-danger",
+        "type": "apiCallConfirm",
+        "title": "Delete Clients",
+        "content": "Are you sure you want to delete Clients?",
+        "api": "Clients/delete",
+        "fieldsToSend": {
+            "name": "_id",
+            "value": "_id"
+        }
+    }],
+    "button": [{
+        "name": "Create",
+        "icon": "plus",
+        "class": "btn-success",
+        "type": "page",
+        "action": "createClients"
+    }],
+    "apiCall": {
+        "url": "Clients/search",
+        "params": "_id"
+    }
+}
