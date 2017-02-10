@@ -1,0 +1,46 @@
+{
+    "title": "Edit Gallery",
+    "jsonPage": "viewGallery",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [ {
+        "name": "Image",
+        "type": "image",
+        "tableRef": "image",
+        "option": "single",
+        "size": "213 x 146",
+        "placeholder": "Enter Logo",
+        "id": "input1",
+        "model": "image",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitGallery",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewGallery"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewGallery"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Gallery/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "Gallery/getOne",
+        "params": "_id"
+    }
+}

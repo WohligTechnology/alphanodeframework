@@ -1,6 +1,6 @@
 {
     "title": "Create Client",
-    "jsonPage": "viewClientssss",
+    "jsonPage": "viewClients",
     "desciption": "",
     "pageType": "create",
     "fields": [{

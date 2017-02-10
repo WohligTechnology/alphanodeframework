@@ -1,30 +1,29 @@
 var schema = new Schema({
+
     name: {
         type: String,
-        default: " "
-    },
-    journeyimage: {
-        type: String,
         default: ""
     },
-    date: {
-        type: Date,
+
+    content: {
+        type: String
+    },
+
+    order: {
+        type: Number,
         default: 0
     },
-    content: {
-        type: String,
-        default: ""
-    },
+
     status: {
         type: String,
         enum: ["true", "false"]
-    },
+    }
 });
 
 schema.plugin(deepPopulate, {});
 schema.plugin(uniqueValidator);
 schema.plugin(timestamps);
-module.exports = mongoose.model('Journey', schema);
+module.exports = mongoose.model('Testimonial', schema);
 
 var exports = _.cloneDeep(require("sails-wohlig-service")(schema));
 var model = {};

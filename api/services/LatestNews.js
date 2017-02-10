@@ -8,9 +8,8 @@ var schema = new Schema({
         type: String,
         default: ""
     },
-
-    order: {
-        type: Number,
+    date: {
+        type: Date,
         default: 0
     },
 
@@ -18,13 +17,14 @@ var schema = new Schema({
         type: String,
         default: ""
     },
+    logo1: {
+        type: String,
+        default: ""
+    },
 
     status: {
         type: String,
         enum: ["true", "false"]
-    },
-    link: {
-        type: String
     }
 });
 

@@ -32,9 +32,9 @@
         "validation": ["", "trim", ""],
         "url": ""
     }, {
-        "name": "Order",
-        "type": "text",
-        "tableRef": "order",
+        "name": "Date",
+        "type": "date",
+        "tableRef": "date",
         "placeholder": "Enter Order",
         "id": "input1",
         "validation": ["", "trim", ""],

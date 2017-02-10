@@ -1,0 +1,66 @@
+{
+    "title": "Create Product statistics",
+    "name": "ProductStatistics",
+    "jsonPage": "viewProductStatistics",
+    "desciption": "",
+    "pageType": "create",
+    "urlFields": ["ProductStatistics"],
+    "fields": [{
+            "name": "Industries",
+            "type": "number",
+            "tableRef": "industries",
+            "placeholder": "Enter number",
+            "id": "name",
+            "validation": ["required", "trim", "unique"],
+            "url": ""
+        }, {
+            "name": "Polymer",
+            "type": "number",
+            "tableRef": "polymer",
+            "placeholder": "Enter number",
+            "id": "email",
+            "validation": ["", "trim", "unique"],
+            "url": ""
+        },
+        {
+            "name": "Technologies",
+            "type": "number",
+            "tableRef": "technologies",
+            "placeholder": "Enter number",
+            "id": "email",
+            "validation": ["", "trim", "unique"],
+            "url": ""
+        },
+        {
+            "name": "Employees",
+            "type": "number",
+            "tableRef": "employees",
+            "placeholder": "Enter number",
+            "id": "email",
+            "validation": ["", "trim", "unique"],
+            "url": ""
+        }
+    ],
+    "action": [{
+        "name": "submit",
+        "action": "submitProductStatistics",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewProductStatistics"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewProductStatistics"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "ProductStatistics/save"
+    }
+}

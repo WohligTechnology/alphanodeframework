@@ -1,33 +1,32 @@
 {
-    "title": "Journey",
-    "description": "List of Journey",
+    "title": "Product statistics",
+    "description": "List of Product statistics",
     "pageType": "view",
     "sendIdWithCreate": true,
     "urlFields": ["_id"],
     "fields": [{
-        "name": "Name",
+        "name": "Industries",
         "isSort": "",
-        "tableRef": "name"
+        "tableRef": "industries"
     }, {
-        "name": "Journey Image",
-        "type": "image",
+        "name": "Polymer",
         "isSort": "",
-        "tableRef": "journeyimage"
+        "tableRef": "polymer"
     }, {
-        "name": "Date",
+        "name": "Technologies",
         "isSort": "",
-        "tableRef": "date"
-    }, {
-        "name": "Status",
+        "tableRef": "technologies"
+    },{
+        "name": "Employees",
         "isSort": "",
-        "tableRef": "status"
+        "tableRef": "employees"
     }],
     "action": [{
         "name": "edit",
         "icon": "fa-pencil",
         "buttonClass": "btn-primary",
         "type": "page",
-        "action": "editJourney",
+        "action": "editProductStatistics",
         "fieldsToSend": {
             "_id": "_id"
         }
@@ -36,9 +35,9 @@
         "icon": "fa-trash",
         "buttonClass": "btn-danger",
         "type": "apiCallConfirm",
-        "title": "Delete Journey",
-        "content": "Are you sure you want to delete Journey?",
-        "api": "Journey/delete",
+        "title": "Delete ProductStatistics",
+        "content": "Are you sure you want to delete ProductStatistics?",
+        "api": "ProductStatistics/delete",
         "fieldsToSend": {
             "name": "_id",
             "value": "_id"
@@ -49,10 +48,10 @@
         "icon": "plus",
         "class": "btn-success",
         "type": "page",
-        "action": "createJourney"
+        "action": "createProductStatistics"
     }],
     "apiCall": {
-        "url": "Journey/search",
+        "url": "ProductStatistics/search",
         "params": "_id"
     }
 }

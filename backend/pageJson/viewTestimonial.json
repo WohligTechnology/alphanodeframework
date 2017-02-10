@@ -1,22 +1,18 @@
 {
-    "title": "Journey",
-    "description": "List of Journey",
+    "title": "Testimonial",
+    "description": "List of Testimonial",
     "pageType": "view",
     "sendIdWithCreate": true,
     "urlFields": ["_id"],
     "fields": [{
         "name": "Name",
+        "type": "text",
         "isSort": "",
         "tableRef": "name"
     }, {
-        "name": "Journey Image",
-        "type": "image",
+        "name": "Order",
         "isSort": "",
-        "tableRef": "journeyimage"
-    }, {
-        "name": "Date",
-        "isSort": "",
-        "tableRef": "date"
+        "tableRef": "order"
     }, {
         "name": "Status",
         "isSort": "",
@@ -27,7 +23,7 @@
         "icon": "fa-pencil",
         "buttonClass": "btn-primary",
         "type": "page",
-        "action": "editJourney",
+        "action": "editTestimonial",
         "fieldsToSend": {
             "_id": "_id"
         }
@@ -36,9 +32,9 @@
         "icon": "fa-trash",
         "buttonClass": "btn-danger",
         "type": "apiCallConfirm",
-        "title": "Delete Journey",
-        "content": "Are you sure you want to delete Journey?",
-        "api": "Journey/delete",
+        "title": "Delete Testimonial",
+        "content": "Are you sure you want to delete Testimonial?",
+        "api": "Testimonial/delete",
         "fieldsToSend": {
             "name": "_id",
             "value": "_id"
@@ -49,10 +45,10 @@
         "icon": "plus",
         "class": "btn-success",
         "type": "page",
-        "action": "createJourney"
+        "action": "createTestimonial"
     }],
     "apiCall": {
-        "url": "Journey/search",
+        "url": "Testimonial/search",
         "params": "_id"
     }
 }

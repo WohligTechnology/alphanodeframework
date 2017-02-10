@@ -37,12 +37,12 @@ var navigationservice = angular.module('navigationservice', [])
             sref: "#/page/viewJourney//",
             icon: "phone"
         }, {
-            name: "LatestNews",
+            name: "News",
             classis: "active",
             sref: "#/page/viewLatestNews//",
             icon: "phone"
         },{
-            name: "Products",
+            name: "Product statistics",
             classis: "active",
             sref: "#/page/viewProducts//",
             icon: "phone"
@@ -51,7 +51,22 @@ var navigationservice = angular.module('navigationservice', [])
             classis: "active",
             sref: "#/page/viewAboutUs//",
             icon: "phone"
-        }
+        },{
+            name: "Products",
+            classis: "active",
+            sref: "#/page/viewProducts//",
+            icon: "phone"
+        }//{
+        //     name: "Testimonial",
+        //     classis: "active",
+        //     sref: "#/page/viewTestimonial//",
+        //     icon: "phone"
+        // },{
+        //     name: "Gallery",
+        //     classis: "active",
+        //     sref: "#/page/viewGallery//",
+        //     icon: "phone"
+        // }
 
 
     ];

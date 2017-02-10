@@ -5,21 +5,23 @@
     "sendIdWithCreate": true,
     "urlFields": ["_id"],
     "fields": [{
-        "name": "Industries",
+        "name": "Product Name",
         "isSort": "",
-        "tableRef": "industries"
+        "tableRef": "name"
     }, {
-        "name": "Polymer",
+        "name": "Desktop Image",
+        "type": "image",
         "isSort": "",
-        "tableRef": "polymer"
+        "tableRef": "desktopimage"
     }, {
-        "name": "Technologies",
+        "name": "Mobile Image",
+        "type": "image",
         "isSort": "",
-        "tableRef": "technologies"
+        "tableRef": "mobileimage"
     },{
-        "name": "Employees",
+        "name": "Selected Product",
         "isSort": "",
-        "tableRef": "employees"
+        "tableRef": "pselect"
     }],
     "action": [{
         "name": "edit",

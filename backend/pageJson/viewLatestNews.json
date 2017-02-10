@@ -9,23 +9,23 @@
         "isSort": "",
         "tableRef": "name"
     }, {
-        "name": "Logo",
+        "name": "HomePageImage",
         "type": "image",
         "isSort": "",
         "tableRef": "logo"
     }, {
-        "name": "Order",
-
+        "name": "InnerPageImage",
+        "type": "image",
         "isSort": "",
-        "tableRef": "order"
+        "tableRef": "logo1"
+    }, {
+        "name": "Date",
+        "isSort": "",
+        "tableRef": "date"
     }, {
         "name": "Status",
         "isSort": "",
         "tableRef": "status"
-    }, {
-        "name": "url",
-        "isSort": "",
-        "tableRef": "link"
     }],
     "action": [{
         "name": "edit",
