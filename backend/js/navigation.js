@@ -9,57 +9,57 @@ var navigationservice = angular.module('navigationservice', [])
     var navigation = [{
             name: "Users",
             classis: "active",
-            sref: "#/page/viewUser//",
+            sref: "#!/page/viewUser//",
             icon: "phone"
         }, {
             name: "Enquiry",
             classis: "active",
-            sref: "#/page/viewEnquiry//",
+            sref: "#!/page/viewEnquiry//",
             icon: "phone"
         }, {
             name: "Careers",
             classis: "active",
-            sref: "#/page/viewCareers//",
+            sref: "#!/page/viewCareers//",
             icon: "phone"
         }, {
             name: "Home Slider",
             classis: "active",
-            sref: "#/page/viewHomeSlider//",
+            sref: "#!/page/viewHomeSlider//",
             icon: "phone"
         }, {
             name: "Clients",
             classis: "active",
-            sref: "#/page/viewClients//",
+            sref: "#!/page/viewClients//",
             icon: "phone"
         }, {
             name: "Journey",
             classis: "active",
-            sref: "#/page/viewJourney//",
+            sref: "#!/page/viewJourney//",
             icon: "phone"
         }, {
             name: "News",
             classis: "active",
-            sref: "#/page/viewLatestNews//",
+            sref: "#!/page/viewLatestNews//",
             icon: "phone"
         },{
             name: "Product statistics",
             classis: "active",
-            sref: "#/page/viewProducts//",
+            sref: "#!/page/viewProducts//",
             icon: "phone"
         },{
             name: "AboutUs",
             classis: "active",
-            sref: "#/page/viewAboutUs//",
+            sref: "#!/page/viewAboutUs//",
             icon: "phone"
         },{
             name: "Products",
             classis: "active",
-            sref: "#/page/viewProducts//",
+            sref: "#!/page/viewProducts//",
             icon: "phone"
         }//{
         //     name: "Testimonial",
         //     classis: "active",
-        //     sref: "#/page/viewTestimonial//",
+        //     sref: "#!/page/viewTestimonial//",
         //     icon: "phone"
         // },{
         //     name: "Gallery",
