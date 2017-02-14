@@ -13,11 +13,15 @@ var schema = new Schema({
         default: 0
     },
 
-    logo: {
+    homepageimage: {
         type: String,
         default: ""
     },
-    logo1: {
+    innerpageimage: {
+        type: String,
+        default: ""
+    },
+    relatedimage: {
         type: String,
         default: ""
     },

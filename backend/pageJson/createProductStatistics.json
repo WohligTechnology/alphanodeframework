@@ -1,49 +1,46 @@
 {
-    "title": "Create Product statistics",
+    "title": "Create Product Statistics",
     "name": "ProductStatistics",
     "jsonPage": "viewProductStatistics",
     "desciption": "",
     "pageType": "create",
     "urlFields": ["ProductStatistics"],
     "fields": [{
-            "name": "Industries",
-            "type": "number",
-            "tableRef": "industries",
-            "placeholder": "Enter number",
-            "id": "name",
-            "validation": ["required", "trim", "unique"],
-            "url": ""
-        }, {
-            "name": "Polymer",
-            "type": "number",
-            "tableRef": "polymer",
-            "placeholder": "Enter number",
-            "id": "email",
-            "validation": ["", "trim", "unique"],
-            "url": ""
-        },
-        {
-            "name": "Technologies",
-            "type": "number",
-            "tableRef": "technologies",
-            "placeholder": "Enter number",
-            "id": "email",
-            "validation": ["", "trim", "unique"],
-            "url": ""
-        },
-        {
-            "name": "Employees",
-            "type": "number",
-            "tableRef": "employees",
-            "placeholder": "Enter number",
-            "id": "email",
-            "validation": ["", "trim", "unique"],
-            "url": ""
-        }
-    ],
+        "name": "Industries",
+        "type": "number",
+        "tableRef": "industries",
+        "placeholder": "Enter Name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
+        "name": "Polymer",
+        "type": "number",
+        "tableRef": "polymer",
+        "placeholder": "Enter Name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
+        "name": "Technologies",
+        "type": "number",
+        "tableRef": "technologies",
+        "placeholder": "Enter Name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
+        "name": "Employees",
+        "type": "number",
+        "tableRef": "employees",
+        "placeholder": "Enter Name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }],
     "action": [{
         "name": "submit",
-        "action": "submitProductStatistics",
+        "action": "submitWhatsHot",
         "stateName": {
             "page": "page",
             "json": {

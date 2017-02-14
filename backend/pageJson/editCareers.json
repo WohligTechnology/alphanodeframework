@@ -52,6 +52,14 @@
             "id": "message",
             "validation": ["", "trim", ""],
             "url": ""
+        }, {
+            "name": "Content",
+            "type": "wysiwyg",
+            "tableRef": "content",
+            "placeholder": "Enter name",
+            "id": "input1",
+            "validation": ["", "trim", ""],
+            "url": ""
         }
 
     ],

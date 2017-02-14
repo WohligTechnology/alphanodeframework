@@ -3,9 +3,9 @@
     "name": "Products",
     "jsonPage": "viewProducts",
     "desciption": "",
-    "pageType": "edit",
+    "pageType": "productsedit",
     "urlFields": ["_id"],
-    "fields": [   {
+    "fields": [{
         "name": "Select",
         "type": "tags",
         "tableRef": "pselect",
@@ -15,8 +15,8 @@
         "url": "",
         "dropDownField": "",
         "dropDownType": "single",
-        "dropDown": ["Flexible","Rigid"]
-     },{
+        "dropDown": ["Flexible", "Rigid"]
+    }, {
         "name": "Product Name",
         "type": "text",
         "tableRef": "name",
@@ -79,19 +79,7 @@
     "preApi": {
         "url": "Products/getOne",
         "params": "_id"
-    },
-    "sidemenu": [{
-        "name": "Gallery",
-        "action": "sidemenuRedirect",
-        "jsonPage": "viewGallery",
-        "fieldsToSend": [1],
-        "callFindOne": "products/findGallery"
-    }, {
-        "name": "Testimonial",
-        "action": "sidemenuRedirect",
-        "jsonPage": "viewTestimonial",
-        "fieldsToSend": [1],
-        "callFindOne": "products/findTestimonial"
-    }]
+    }
+
 
 }

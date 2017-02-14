@@ -44,7 +44,7 @@ var navigationservice = angular.module('navigationservice', [])
         },{
             name: "Product statistics",
             classis: "active",
-            sref: "#!/page/viewProducts//",
+            sref: "#!/page/viewProductStatistics//",
             icon: "phone"
         },{
             name: "AboutUs",
@@ -64,7 +64,7 @@ var navigationservice = angular.module('navigationservice', [])
         // },{
         //     name: "Gallery",
         //     classis: "active",
-        //     sref: "#/page/viewGallery//",
+        //     sref: "#!/page/viewGallery//",
         //     icon: "phone"
         // }
 
@@ -137,6 +137,16 @@ var navigationservice = angular.module('navigationservice', [])
 
             });
         },
+         boxCall: function (url, formData, callback) {
+            $http.post(adminurl + url, formData).then(function (data) {
+                data = data.data;
+                callback(data);
+
+            });
+        },
+        
+
+
         searchCall: function (url, formData, i, callback) {
             $http.post(adminurl + url, formData).then(function (data) {
                 data = data.data;

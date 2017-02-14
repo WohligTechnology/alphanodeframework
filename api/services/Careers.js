@@ -5,7 +5,8 @@ var schema = new Schema({
     mobile: String,
     email: String,
     resume: String,
-    message: String
+    message: String,
+    content:String
 });
 
 schema.plugin(deepPopulate, {});

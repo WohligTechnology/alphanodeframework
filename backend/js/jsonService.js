@@ -34,6 +34,12 @@ jsonservicemod.service('JsonService', function ($http, TemplateService, $state, 
             TemplateService.changecontent("detail");
           }
           break;
+        case "productsedit":
+          {
+            console.log("IN components EDIT");
+            TemplateService.changecontent("gallery-detail");
+          }
+          break;
       }
       callback();
     });
@@ -99,6 +105,9 @@ jsonservicemod.service('JsonService', function ($http, TemplateService, $state, 
       }
       if (action && action.type == "page") {
         $state.go("page", sendTo);
+      } else if (action && action.type == "productspage") {
+        console.log("IN productspage TYPE");
+        $state.go("productspage", sendTo);
       } else if (action && action.type == "apiCallConfirm") {
         globalfunction.confDel(function (value2) {
           if (value2) {

@@ -16,7 +16,7 @@
     }, {
         "name": "HomePageImage",
         "type": "image",
-        "tableRef": "logo",
+        "tableRef": "homepageimage",
         "option": "single",
         "size": "213 x 146",
         "placeholder": "Enter Logo",
@@ -26,7 +26,17 @@
     }, {
         "name": "InnerPageImage",
         "type": "image",
-        "tableRef": "logo1",
+        "tableRef": "innerpageimage",
+        "option": "single",
+        "size": "213 x 146",
+        "placeholder": "Enter Logo",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
+        "name": "RelatedImage",
+        "type": "image",
+        "tableRef": "relatedimage",
         "option": "single",
         "size": "213 x 146",
         "placeholder": "Enter Logo",

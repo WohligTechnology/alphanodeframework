@@ -9,15 +9,20 @@
         "isSort": "",
         "tableRef": "name"
     }, {
-        "name": "HomePageImage",
+        "name": "HomePage Image",
         "type": "image",
         "isSort": "",
-        "tableRef": "logo"
+        "tableRef": "homepageimage"
     }, {
-        "name": "InnerPageImage",
+        "name": "InnerPage Image",
         "type": "image",
         "isSort": "",
-        "tableRef": "logo1"
+        "tableRef": "innerpageimage"
+    }, {
+        "name": "Related Image",
+        "type": "image",
+        "isSort": "",
+        "tableRef": "relatedimage"
     }, {
         "name": "Date",
         "isSort": "",

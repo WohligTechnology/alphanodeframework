@@ -1,6 +1,6 @@
 {
-    "title": "Product statistics",
-    "description": "List of Product statistics",
+    "title": "Product Statistics",
+    "description": "List of Product Statistics",
     "pageType": "view",
     "sendIdWithCreate": true,
     "urlFields": ["_id"],
@@ -16,7 +16,7 @@
         "name": "Technologies",
         "isSort": "",
         "tableRef": "technologies"
-    },{
+    }, {
         "name": "Employees",
         "isSort": "",
         "tableRef": "employees"

@@ -76,6 +76,12 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
         controller: 'ExcelUploadCtrl'
     })
 
+    .state('productspage', {
+      url: "/page/:id/{page:.*}/{keyword:.*}",
+      templateUrl: "views/template.html",
+      controller: 'ProductsDetailCtrl'
+    })
+
     .state('jagz', {
         url: "/jagz",
         templateUrl: "views/jagz.html",
