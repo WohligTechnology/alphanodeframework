@@ -29,6 +29,14 @@ var schema = new Schema({
             type: String,
             default: ""
         },
+        cname: {
+            type: String,
+            default: ""
+        },
+        city: {
+            type: String,
+            default: ""
+        },
 
         content: {
             type: String
@@ -189,6 +197,8 @@ var model = {
                 testimonial: {
                     $each: [{
                         name: data.name,
+                        cname: data.cname,
+                        city: data.city,
                         content: data.content,
                         order: data.order,
                         status: data.status
@@ -288,6 +298,8 @@ var model = {
         }, {
             $set: {
                 "testimonial.$.name": data.name,
+                "testimonial.$.cname": data.cname,
+                "testimonial.$.city": data.city,
                 "testimonial.$.content": data.content,
                 "testimonial.$.order": data.order,
                 "testimonial.$.status": data.status

@@ -660,22 +660,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             });
         };
 
-        //testimonial editbox
-
-         $scope.editBoxCustomTestimonialPhotos = function (data) {
-
-            console.log("DATADATA", data);
-            $scope.datainfo = data;
-            $scope.newinfo = {};
-            $scope.modalInstance = $uibModal.open({
-                animation: $scope.animationsEnabled,
-                templateUrl: '/backend/views/modal/image-edit-testimonial.html',
-                size: 'lg',
-                scope: $scope,
-
-            });
-        };
-
         $scope.saveEditGalleryPhotos = function (image, id, old) {
             console.log("image", image);
             console.log("id", id);
@@ -685,42 +669,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             data1._id = id;
             data1.photo = image;
             data1.old = old;
-            $scope.newinfo={};
+            $scope.newinfo = {};
 
             NavigationService.boxCall("Products/updateGalleryPhotos", data1, function (data) {
                 $scope.projectData = data.data;
                 $scope.generateField = true;
                 $scope.modalInstance.close();
                 $scope.findProducts();
-                toastr.success(" Project Expense" + " " + "updated" + " successfully.");
+                toastr.success("Gallery" + " " + "updated" + " successfully.");
             })
 
         };
-
-        //testimonial saveedit
-
-
-        $scope.saveEditGalleryPhotos = function (result) {
-            console.log("image", image);
-            console.log("id", id);
-            console.log("old", old);
-
-            var data1 = {};
-            data1._id = id;
-            data1.photo = image;
-            data1.old = old;
-            $scope.newinfo={};
-
-            NavigationService.boxCall("Products/updateTestimonial", data1, function (data) {
-                $scope.projectData = data.data;
-                $scope.generateField = true;
-                $scope.modalInstance.close();
-                $scope.findProducts();
-                toastr.success(" Project Expense" + " " + "updated" + " successfully.");
-            })
-
-        };
-
 
         $scope.editBoxInstitute = function () {
 
@@ -762,13 +721,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.saveProductsPhotos = function (value) {
             console.log("DATA", value);
 
-            console.log("INSIDE SPP");
+
+
+            // console.log("INSIDE SPP");
             NavigationService.boxCall("Products/saveProductsPhotos", value, function (data) {
                 $scope.projectData = data.data;
                 $scope.generateField = true;
                 $scope.modalInstance.close();
                 $scope.findProducts();
-                toastr.success(value.name + " Project" + " " + "added" + " successfully.");
+                toastr.success(value.name + " Gallery" + " " + "added" + " successfully.");
             })
 
         };
@@ -780,7 +741,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 $scope.generateField = true;
                 $scope.modalInstance.close();
                 $scope.findProject();
-                toastr.success(" Project" + " " + "updated" + " successfully.");
+                toastr.success(" Gallery" + " " + "updated" + " successfully.");
             })
 
         };
@@ -793,7 +754,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 $scope.generateField = true;
                 $scope.modalInstance.close();
                 $scope.findProject();
-                toastr.success(" Project" + " " + "updated" + " successfully.");
+                toastr.success(" Gallery" + " " + "updated" + " successfully.");
             })
 
         };
@@ -859,6 +820,251 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 }
             });
         };
+
+        //testimonial
+
+        $scope.findProducts = function () {
+            console.log('datttttttta1111');
+            NavigationService.apiCall("Products/findOneTestimonial", {
+                [$scope.json.json.preApi.params]: $scope.json.keyword._id
+            }, function (data) {
+                // var mydata = _.cloneDeep(data.data);
+                // console.log('mydatatttttttttttt',mydata);
+                $scope.projectDATA = data.data;
+                $scope.tableData = data.data;
+                $scope.generateField = true;
+                console.log("TABLEDATA IS FOUND HERE-->", $scope.tableData);
+            });
+        }
+
+
+
+        $scope.findProducts();
+        // $scope.findState();
+        //  START FOR EDIT
+        if ($scope.json.json.preApi) {
+
+            NavigationService.apiCall($scope.json.json.preApi.url, {
+                [$scope.json.json.preApi.params]: $scope.json.keyword._id
+            }, function (data) {
+                $scope.data = data.data;
+                $scope.generateField = true;
+                console.log("DATA IS FOUND HERE-->", $scope.data);
+
+            });
+        } else {
+            $scope.generateField = true;
+        }
+
+
+        $scope.editBoxCustomTestimonial = function (data) {
+
+            console.log("DATADATA", data);
+
+            $scope.status = ["true", "false"];
+            $scope.datainfo = data;
+            $scope.newinfo = {
+                _id: $scope.json.keyword._id,
+                testi_id: data
+            };
+
+
+            $scope.modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: '/backend/views/modal/image-edit-testimonial.html',
+                size: 'lg',
+                scope: $scope,
+
+            });
+        };
+
+        //testimonial saveedit
+
+        $scope.saveEditTestimonial = function (id,name,cname,city,content,order,status) {
+            //console.log("DATA", result);
+            newinfo = {};
+            newinfo._id = $scope.json.keyword._id,
+            newinfo.testi_id = id;
+            newinfo.name = name;
+            newinfo.cname = cname;
+            newinfo.city = city;
+            newinfo.content = content;
+            newinfo.order = order;
+            newinfo.status = status;
+
+                // console.log("image", image);
+                // console.log("id", id);
+                // console.log("old", old);
+
+                // var data1 = {};
+                // data1.name = result.name;
+                // data1.content = result.content;
+                // data1.order = result.order;
+                // data1.status = result.status;
+                // $scope.newinfo = {};
+
+                NavigationService.boxCall("Products/updateTestimonial", newinfo, function (data) {
+                    $scope.projectData = data.data;
+                    $scope.generateField = true;
+                    $scope.modalInstance.close();
+                    $scope.findProducts();
+                    toastr.success(" Testimonial" + " " + "updated" + " successfully.");
+                })
+
+        };
+
+        //testimonial all
+
+        // $scope.editBoxInstitute = function () {
+
+
+        //     var modalInstance = $uibModal.open({
+        //         animation: $scope.animationsEnabled,
+        //         templateUrl: '/backend/views/modal/institute-edit-detail.html',
+        //         size: 'lg',
+        //         scope: $scope,
+        //         tableData: $scope.tableData
+        //     });
+        // };
+
+        $scope.addBoxTestimonial = function (data) {
+            console.log("DATADATA", data);
+            $scope.status = ["true", "false"];
+            $scope.newtestimonialinfo = {
+                _id: data
+
+            };
+
+            $scope.modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: '/backend/views/modal/image-add-testimonial.html',
+                size: 'lg',
+                scope: $scope,
+                tableData: $scope.tableData
+            });
+        };
+
+
+        $scope.onCancel = function (sendTo) {
+            $scope.json.json.action[1].stateName.json.keyword = "";
+            $scope.json.json.action[1].stateName.json.page = "";
+            $state.go($scope.json.json.action[1].stateName.page, $scope.json.json.action[1].stateName.json);
+        };
+
+
+        $scope.saveTestimonial = function (id, name,cname,city, content, order, status) {
+            // console.log("DATA", value);
+
+            console.log("DATA", name);
+            console.log("DATA", content);
+            console.log("DATA", order);
+            console.log("DATA", status);
+            testiData = {};
+            testiData.name = name;
+            testiData.cname = cname;
+            testiData.city = city;
+            testiData._id = id;
+            testiData.content = content;
+            testiData.order = order;
+            testiData.status = status;
+
+            console.log("INSIDE SPP");
+            NavigationService.boxCall("Products/saveTestimonial", testiData, function (data) {
+                $scope.projectData = data.data;
+                $scope.generateField = true;
+                $scope.modalInstance.close();
+                $scope.findProducts();
+                toastr.success(value.name + " testimonial" + " " + "added" + " successfully.");
+            })
+
+        };
+
+        // $scope.updateProjectPhotos = function (value) {
+        //     console.log("DATA", value);
+        //     NavigationService.boxCall("Project/save", value, function (data) {
+        //         $scope.projectData = data.data;
+        //         $scope.generateField = true;
+        //         $scope.modalInstance.close();
+        //         $scope.findProject();
+        //         toastr.success(" Gallery" + " " + "updated" + " successfully.");
+        //     })
+
+        // };
+
+
+        // $scope.saveEditProductsPhotos = function (value) {
+        //     console.log("DATA", value);
+        //     NavigationService.boxCall("Products/save", value, function (data) {
+        //         $scope.projectData = data.data;
+        //         $scope.generateField = true;
+        //         $scope.modalInstance.close();
+        //         $scope.findProject();
+        //         toastr.success(" Gallery" + " " + "updated" + " successfully.");
+        //     })
+
+        // };
+
+
+        // $scope.addNewProject = function (value) {
+
+        //     console.log("DATA", value);
+        //     NavigationService.boxCall("Institute/addNewProject", value, function (data) {
+        //         $scope.newProjectData = data.data;
+        //         $scope.generateField = true;
+        //         $scope.modalInstance.close();
+        //         $state.reload();
+        //     })
+
+        // };
+
+        $scope.removeTestimonial = function (value, project) {
+
+            var abc = {};
+            console.log("value = ", value)
+            abc._id = project;
+            abc.testid = value
+            // abc = value;
+            // abc.project=project;
+            // console.log("PROJECT ",project);
+            console.log("PROJECT IMAGE afdadfdaTA", abc);
+
+            NavigationService.boxCall("Products/removeTestimonial", abc, function (data) {
+                $scope.newProjectData = data.data;
+                $scope.generateField = true;
+                // $state.reload();
+                $scope.findProducts();
+            })
+
+        };
+
+        $scope.closeBox = function () {
+            $scope.modalInstance.close();
+            $scope.findProject();
+        };
+
+
+        // $scope.saveData = function (formData) {
+        //         console.log("in save");
+        //         console.log("ABC", formData);
+        //         // console.log("PIC",formData.photos[0].photo);
+        //         NavigationService.apiCall($scope.json.json.apiCall.url, formData, function (data) {
+        //                 if (data.value === true) {
+        //                     $scope.json.json.action[0].stateName.json.keyword = "";
+        //                     $scope.json.json.action[0].stateName.json.page = "";
+        //                     $state.go($scope.json.json.action[0].stateName.page, $scope.json.json.action[0].stateName.json);
+        //                     var messText = "created";
+        //                     if ($scope.json.keyword._id) {
+        //                         messText = "edited";
+        //                     }
+        //                     toastr.success($scope.json.json.name + " " + formData.name + " " + messText + " successfully.");
+        //                 } else {
+        //                     var messText = "creating";
+        //                     if ($scope.json.keyword._id) {
+        //                         messText = "editing";
+        //                     }
+        //                     toastr.error("Failed " + messText + " " + $scope.json.json.name);
+        //                 }
+
     })
 
 

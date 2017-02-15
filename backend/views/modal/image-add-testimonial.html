@@ -11,23 +11,54 @@
         <div class="row">
             <div class="col-md-12">
                 <div>
-                    <upload-image ng-model="projectinfo.images" ng-disabled="type.disabled" no-view="" ng-if="!type.view" class="ng-pristine ng-untouched ng-valid ng-scope ng-isolate-scope ng-empty"
-                        style="">
-                        <div class="form-group">
-                            <div class="btn-upload btn btn-primary btn-outline btn-small create-btn" ng-hide="disabled">
-                                <input id="inputImage" ng-show="!isMultiple" type="file" accept="image/*,application/pdf" image="image" title="Choose Files"
-                                    class="btn-primary ng-isolate-scope">
-                                    <input id="inputImage" ng-show="isMultiple" type="file" accept="image/*,application/pdf" image="image" title="Choose Multiple Files"
-                                        class="btn-primary ng-isolate-scope ng-hide" onchange="angular.element(this).scope().clearOld()"
-                                        multiple="" style="">
-                                        <span>CHOOSE FILE</span>
-                            </div>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" placeholder="Enter Name" ng-model="newtestimonialinfo.name" class="form-control" ng-required="type.required"
+                            ng-disabled="">
+                            <div class="error-msg " ng-show="detailForm[type.tableRef].$invalid &amp;&amp; detailForm[type.tableRef].$touched">Please enter Name</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Company Name</label>
+                        <input type="text" name="cname" placeholder="Enter Company Name" ng-model="newtestimonialinfo.cname" class="form-control" ng-required="type.required"
+                            ng-disabled="">
+                            <div class="error-msg " ng-show="detailForm[type.tableRef].$invalid &amp;&amp; detailForm[type.tableRef].$touched">Please enter Name</div>
+                    </div>
+                    <div class="form-group">
+                        <label>City</label>
+                        <input type="text" name="city" placeholder="Enter City" ng-model="newtestimonialinfo.city" class="form-control" ng-required="type.required"
+                            ng-disabled="">
+                            <div class="error-msg " ng-show="detailForm[type.tableRef].$invalid &amp;&amp; detailForm[type.tableRef].$touched">Please enter Name</div>
+                    </div>
+                    <div class="form-group tinymce">
+                        <label>Content</label>
+                        <label>{{type.name}} <span ng-show="type.required">*</span></label>
+                        <fieldset ng-disabled="true">
+                            <textarea ui-tinymce="tinymceOptions" name="{{type.tableRef}}" placeholder="{{type.placeholder}}" ng-model="newtestimonialinfo.content"
+                                ng-required="type.required" readonly></textarea>
+                        </fieldset>
+                        <div class="error-msg" ng-show="detailForm[type.tableRef].$invalid && detailForm[type.tableRef].$touched">Please enter valid {{type.name}}</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Order</label>
+                        <input type="number" name="order" placeholder="Enter order" ng-model="newtestimonialinfo.order" class="form-control" ng-required="type.required"
+                            ng-disabled="">
+                            <div class="error-msg " ng-show="detailForm[type.tableRef].$invalid &amp;&amp; detailForm[type.tableRef].$touched">Please enter valid order</div>
+                    </div>
+                    <div>
+                        <div class="form-group ">
+                            <label>Status</label>
+                            <!--<multiple-select name="state" required="" ng-model="" ng-name="name[type.tableRef]" url="Project/search" api="searchCall"
+                                ng-if="!type.filterField"></multiple-select>
+                        </div>-->
+                            <select ng-model="newtestimonialinfo.status" class="form-control">{{newtestimonialinfo.status}} 
+                                <option ng-repeat="y in status" value="{{y}}"> {{y}}</option>
+                            </select>
                         </div>
-                        </upload-image>
+                    </div>
                 </div>
             </div>
             <div class="text-center">
-                <button class="btn btn-primary btn-save " type="submit" ng-disabled="modalForm.$invalid" ng-click="saveProductsPhotos(projectinfo)">Save</button>
+                <button class="btn btn-primary btn-save " type="submit" ng-disabled="modalForm.$invalid" ng-click="saveTestimonial(newtestimonialinfo._id,newtestimonialinfo.name,newtestimonialinfo.cname,newtestimonialinfo.city,newtestimonialinfo.content,newtestimonialinfo.order,newtestimonialinfo.status)">Save</button>
                 <button class="btn btn-primary btn-danger" type="submit" ng-click="closeBox()">Cancel</button>
             </div>
         </div>
