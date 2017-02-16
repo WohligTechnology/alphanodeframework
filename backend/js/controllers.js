@@ -799,7 +799,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         $scope.saveData = function (formData) {
             console.log("in save");
-            console.log("ABC", formData);
+            delete formData.testimonial;
+            delete formData.gallery;
+              console.log("ABC", formData);
             // console.log("PIC",formData.photos[0].photo);
             NavigationService.apiCall($scope.json.json.apiCall.url, formData, function (data) {
                 if (data.value === true) {

@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div>
-                    
+                    <label>Choose image to upload</label>
                     <upload-image ng-model="newinfo.data" ng-disabled="type.disabled" no-view="" ng-if="!type.view" class="ng-pristine ng-untouched ng-valid ng-scope ng-isolate-scope ng-empty"
                         style="">
                         <div class="form-group">
@@ -27,8 +27,9 @@
                         </upload-image>
                 </div>
             </div>
+            
             <div class="text-center">
-                <button class="btn btn-primary btn-save " type="submit" ng-disabled="modalForm.$invalid" ng-click="saveEditGalleryPhotos(newinfo.data,tableData._id,datainfo)">Save</button>
+                <button class="btn btn-primary btn-save " type="submit" ng-disabled="modalForm.$invalid" ng-click="saveEditGalleryPhotos(newinfo.data,tableData._id,datainfo.image)">Save</button>
                 <button class="btn btn-primary btn-danger" type="submit" ng-click="closeBox()">Cancel</button>
             </div>
         </div>
