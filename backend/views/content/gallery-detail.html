@@ -45,8 +45,13 @@
                                                                 <tr ng-repeat="photo in tableData.gallery">
                                                                     <td>{{$index+1}}</td>
                                                                     <td>
-                                                                        <img ng-src="http://wohlig.io/api/upload/readFile?file={{photo.image}}"
-                                                                            style="width:150px;height:100px;"></td>
+                                                                           <img ng-src="http://alpha.tingdom.in/api/upload/readFile?file={{photo.image}}"
+                                                                            style="width:150px;height:100px;">
+
+                                                                        <!--<img ng-src="http://wohlig.io/api/upload/readFile?file={{photo.image}}"
+                                                                            style="width:150px;height:100px;">-->
+
+                                                                            </td>
                                                                     <td>
                                                                         <a class="btn btn-primary" ng-click="editBoxCustomProductsPhotos(photo.image)">
                                                                             <i class="fa fa-pencil"></i>
@@ -107,7 +112,7 @@
                                                                             <i class="fa fa-trash"></i>
                                                                         </a>
                                                                     </td>
-                                                                </tr>
+                                         io                       </tr>
                                                                 <tbody>
                                                                 </tbody>
                                                     </table>
