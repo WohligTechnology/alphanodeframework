@@ -33,21 +33,21 @@
         "validation": ["", "trim", ""],
         "url": ""
     }, {
-        "name": "Desktop Image",
+        "name": "Desktop Image(1500 x 329px)",
         "type": "image",
         "tableRef": "desktopimage",
         "option": "single",
-        "size": "1600 x 900px",
+        "size": "1500 x 329px",
         "placeholder": "Enter Desktop Image",
         "id": "input1",
         "validation": ["", "trim", ""],
         "url": ""
     }, {
-        "name": "Mobile Image",
+        "name": "Mobile Image(1080 x 1920px)",
         "type": "image",
         "tableRef": "mobileimage",
         "option": "single",
-        "size": "705 x 1087px",
+        "size": "1080 x 1920px",
         "placeholder": "Enter Mobile Image",
         "id": "input1",
         "validation": ["", "trim", ""],

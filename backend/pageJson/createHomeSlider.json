@@ -6,27 +6,27 @@
     "pageType": "create",
     "urlFields": ["HomeSlider"],
     "fields": [{
-        "name": "Desktop Image",
+        "name": "Desktop Image(1600 x 713px)",
         "type": "image",
         "tableRef": "desktopimage",
         "option": "single",
-        "size": "1600 x 900px",
+        "size": "1600 x 713px",
         "placeholder": "Enter Desktop Image",
         "id": "input1",
         "validation": ["", "trim", ""],
         "url": ""
     }, {
-        "name": "Mobile Image",
+        "name": "Mobile Image(1080 x 1920px)",
         "type": "image",
         "tableRef": "mobileimage",
         "option": "single",
-        "size": "705 x 1087px",
+        "size": "1080 x 1920px",
         "placeholder": "Enter Mobile Image",
         "id": "input1",
         "validation": ["", "trim", ""],
         "url": ""
     },{
-        "name": "IPad Image",
+        "name": "IPad Image(705 x 1087px)",
         "type": "image",
         "tableRef": "ipadimage",
         "option": "single",

@@ -14,11 +14,11 @@
         "validation": ["required", "trim", "unique"],
         "url": ""
     }, {
-        "name": "Logo",
+        "name": "Logo(228 x 200px)",
         "type": "image",
         "tableRef": "logo",
         "option": "single",
-        "size": "213 x 146",
+        "size": "228 x 200px",
         "placeholder": "Enter Logo",
         "id": "input1",
         "model": "logo",

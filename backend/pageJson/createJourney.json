@@ -14,11 +14,11 @@
         "validation": ["required", "trim", "unique"],
         "url": ""
     }, {
-        "name": "Journey image",
+        "name": "Journey image(394 x 251px)",
         "type": "image",
         "tableRef": "journeyimage",
         "option": "single",
-        "size": "213 x 146",
+        "size": "394 x 251px",
         "placeholder": "Enter Logo",
         "id": "input1",
         "validation": ["required", "trim", "unique"],

@@ -22,6 +22,10 @@ var schema = new Schema({
         image: {
             type: String,
             default: ""
+        },
+        thumbimage: {
+            type: String,
+            default: ""
         }
     }],
     testimonial: [{
@@ -73,8 +77,8 @@ var model = {
 
                 gallery: {
                     $each: [{
-                        image: data.images,
-
+                        image: data.images1,
+                        thumbimage: data.images2
                     }]
                 }
             }
@@ -107,13 +111,15 @@ var model = {
             "_id": data._id,
             "gallery": {
                 $elemMatch: {
-                    image: data.images
+                    image: data.images,
+                    thumbimage: data.thumbimages
                 }
             }
         }, {
             $pull: {
                 gallery: {
-                    image: data.images
+                    image: data.images,
+                    thumbimage: data.thumbimages
                 }
             }
         }, function (err, updated) {
@@ -156,17 +162,20 @@ var model = {
     updateGalleryPhotos: function (data, callback) {
 
         console.log("DATA", data);
+        
         Products.update({
             _id: data._id,
 
             "gallery": {
                 $elemMatch: {
-                    image: data.old
+                    image: data.old,
+                    thumbimage: data.old1
                 }
             }
         }, {
             $set: {
-                "gallery.$.image": data.photo
+                "gallery.$.image": data.photo1,
+                "gallery.$.thumbimage": data.photo2
 
             }
         }, function (err, updated) {

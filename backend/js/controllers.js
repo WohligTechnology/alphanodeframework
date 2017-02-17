@@ -660,15 +660,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             });
         };
 
-        $scope.saveEditGalleryPhotos = function (image, id, old) {
-            console.log("image", image);
-            console.log("id", id);
-            console.log("old", old);
+        $scope.saveEditGalleryPhotos = function (image1,image2, id, old1,old2) {
+            // console.log("image", image);
+            // console.log("id", id);
+            // console.log("old", old);
 
             var data1 = {};
             data1._id = id;
-            data1.photo = image;
-            data1.old = old;
+            data1.photo1 = image1;
+            data1.photo2 = image2;
+            data1.old = old1;
+            data1.old1 = old2;
             $scope.newinfo = {};
 
             NavigationService.boxCall("Products/updateGalleryPhotos", data1, function (data) {
@@ -771,12 +773,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             })
 
         };
-        $scope.removeProductsPhotos = function (value, project) {
+        $scope.removeProductsPhotos = function (value,value1, project) {
 
             var abc = {};
 
             abc._id = project;
-            abc.images = value
+            abc.images = value;
+            abc.thumbimages = value1;
             // abc = value;
             // abc.project=project;
             // console.log("PROJECT ",project);

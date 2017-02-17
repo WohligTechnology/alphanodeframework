@@ -11,8 +11,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div>
-                    <label>Choose image to upload</label>
-                    <upload-image ng-model="newinfo.data" ng-disabled="type.disabled" no-view="" ng-if="!type.view" class="ng-pristine ng-untouched ng-valid ng-scope ng-isolate-scope ng-empty"
+                    <label>Choose image to upload(1626 x 541px)</label>
+                    <upload-image ng-model="newinfo.data1" ng-disabled="type.disabled" no-view="" ng-if="!type.view" class="ng-pristine ng-untouched ng-valid ng-scope ng-isolate-scope ng-empty"
                         style="">
                         <div class="form-group">
                             <div class="btn-upload btn btn-primary btn-outline btn-small create-btn" ng-hide="disabled">
@@ -26,10 +26,25 @@
                         </div>
                         </upload-image>
                 </div>
+                <div>
+                    <label>Choose Thumbnail image to upload(210 x 110px)</label>
+                    <upload-image ng-model="newinfo.data2" ng-disabled="type.disabled" no-view="" ng-if="!type.view" class="ng-pristine ng-untouched ng-valid ng-scope ng-isolate-scope ng-empty"
+                        style="">
+                        <div class="form-group">
+                            <div class="btn-upload btn btn-primary btn-outline btn-small create-btn" ng-hide="disabled">
+                                <input id="ThumbImage" ng-show="!isMultiple" type="file" accept="image/*,application/pdf" image="thumbimage" title="Choose Files"
+                                    class="btn-primary ng-isolate-scope">
+                                    <input id="thumbImage" ng-show="isMultiple" type="file" accept="image/*,application/pdf" image="thumbimage" title="Choose Multiple Files"
+                                        class="btn-primary ng-isolate-scope ng-hide" onchange="angular.element(this).scope().clearOld()"
+                                        multiple="" style="">
+                                        <span>CHOOSE FILE</span>
+                            </div>
+                        </div>
+                        </upload-image>
+                </div>
             </div>
-            
             <div class="text-center">
-                <button class="btn btn-primary btn-save " type="submit" ng-disabled="modalForm.$invalid" ng-click="saveEditGalleryPhotos(newinfo.data,tableData._id,datainfo.image)">Save</button>
+                <button class="btn btn-primary btn-save " type="submit" ng-disabled="modalForm.$invalid" ng-click="saveEditGalleryPhotos(newinfo.data1,newinfo.data2,tableData._id,datainfo.image,datainfo.thumbimage)">Save</button>
                 <button class="btn btn-primary btn-danger" type="submit" ng-click="closeBox()">Cancel</button>
             </div>
         </div>
