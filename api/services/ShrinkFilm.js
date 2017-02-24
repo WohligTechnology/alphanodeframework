@@ -54,21 +54,20 @@ var schema = new Schema({
             enum: ["true", "false"]
         }
     }]
-
 });
 
 schema.plugin(deepPopulate, {});
 schema.plugin(uniqueValidator);
 schema.plugin(timestamps);
-module.exports = mongoose.model('Products', schema);
+module.exports = mongoose.model('ShrinkFilm', schema);
 
 var exports = _.cloneDeep(require("sails-wohlig-service")(schema));
 var model = {
 
-    saveProductsPhotos: function (data, callback) {
+    saveShrinkPhotos: function (data, callback) {
 
         console.log(data);
-        Products.findOneAndUpdate({
+        ShrinkFilm.findOneAndUpdate({
             _id: data._id
         }, {
             $push: {
@@ -100,10 +99,10 @@ var model = {
         })
     },
 
-    removeProductsPhotos: function (data, callback) {
+    removeShrinkPhotos: function (data, callback) {
 
         console.log("DATA", data);
-        Products.update({
+        ShrinkFilm.update({
 
             "_id": data._id,
             "gallery": {
@@ -132,10 +131,10 @@ var model = {
         });
     },
 
-    findOneProducts: function (data, callback) {
+    findOneShrink: function (data, callback) {
 
 
-        Products.findOne({
+        ShrinkFilm.findOne({
             _id: data._id
         }).deepPopulate("gallery").exec(function (err, found) {
 
@@ -156,11 +155,11 @@ var model = {
 
         })
     },
-    updateGalleryPhotos: function (data, callback) {
+    updateShrinkGalleryPhotos: function (data, callback) {
 
         console.log("DATA", data);
 
-        Products.update({
+        ShrinkFilm.update({
             _id: data._id,
 
             "gallery": {
@@ -192,10 +191,10 @@ var model = {
     //testimonial-----
 
 
-    saveTestimonial: function (data, callback) {
+    saveShrinkTestimonial: function (data, callback) {
 
         console.log(data);
-        Products.findOneAndUpdate({
+        ShrinkFilm.findOneAndUpdate({
             _id: data._id
         }, {
             $push: {
@@ -233,10 +232,10 @@ var model = {
         })
     },
 
-    removeTestimonial: function (data, callback) {
+    removeShrinkTestimonial: function (data, callback) {
 
         console.log("DATA", data);
-        Products.update({
+        ShrinkFilm.update({
             "_id": data._id,
 
             "testimonial": {
@@ -263,10 +262,10 @@ var model = {
         });
     },
 
-    findOneTestimonial: function (data, callback) {
+    findOneShrinkTestimonial: function (data, callback) {
 
 
-        Products.findOne({
+        ShrinkFilm.findOne({
             _id: data._id
         }).deepPopulate("testimonial").exec(function (err, found) {
 
@@ -288,12 +287,12 @@ var model = {
         })
     },
 
-    updateTestimonial: function (data, callback) {
+    updateShrinkTestimonial: function (data, callback) {
 
         console.log("DATA", data);
         //var testData = {};
         //testData.name  = data.name
-        Products.update({
+        ShrinkFilm.update({
             _id: data._id,
 
             "testimonial": {
@@ -322,6 +321,5 @@ var model = {
             }
         });
     },
-
 };
 module.exports = _.assign(module.exports, exports, model);

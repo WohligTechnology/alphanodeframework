@@ -1,10 +1,14 @@
 {
-    "title": "Gallery",
-    "description": "List of Gallery",
+    "title": "Speciality Films",
+    "description": "List of Speciality Films",
     "pageType": "view",
     "sendIdWithCreate": true,
     "urlFields": ["_id"],
     "fields": [{
+        "name": "Selected Product",
+        "isSort": "",
+        "tableRef": "pselect"
+    }, {
         "name": "Image",
         "type": "image",
         "isSort": "",
@@ -15,7 +19,7 @@
         "icon": "fa-pencil",
         "buttonClass": "btn-primary",
         "type": "page",
-        "action": "editGallery",
+        "action": "editSpecialityFilms",
         "fieldsToSend": {
             "_id": "_id"
         }
@@ -24,9 +28,9 @@
         "icon": "fa-trash",
         "buttonClass": "btn-danger",
         "type": "apiCallConfirm",
-        "title": "Delete Gallery",
-        "content": "Are you sure you want to delete Gallery?",
-        "api": "Gallery/delete",
+        "title": "Delete SpecialityFilms",
+        "content": "Are you sure you want to delete SpecialityFilms?",
+        "api": "SpecialityFilms/delete",
         "fieldsToSend": {
             "name": "_id",
             "value": "_id"
@@ -37,10 +41,10 @@
         "icon": "plus",
         "class": "btn-success",
         "type": "page",
-        "action": "createGallery"
+        "action": "createSpecialityFilms"
     }],
     "apiCall": {
-        "url": "Gallery/search",
+        "url": "SpecialityFilms/search",
         "params": "_id"
     }
 }

@@ -1,10 +1,10 @@
 {
-    "title": "Create PP/PE BAGS & LINERS",
-    "name": "Products",
-    "jsonPage": "viewProducts",
+    "title": "Create POF Shrink Film",
+    "name": "ShrinkFilm",
+    "jsonPage": "viewShrinkFilm",
     "desciption": "",
     "pageType": "create",
-    "urlFields": ["Products"],
+    "urlFields": ["ShrinkFilm"],
     "fields": [{
         "name": "Select",
         "type": "tags",
@@ -51,7 +51,7 @@
         "stateName": {
             "page": "page",
             "json": {
-                "id": "viewProducts"
+                "id": "viewShrinkFilm"
             }
         }
     }, {
@@ -60,11 +60,11 @@
         "stateName": {
             "page": "page",
             "json": {
-                "id": "viewProducts"
+                "id": "viewShrinkFilm"
             }
         }
     }],
     "apiCall": {
-        "url": "Products/save"
+        "url": "ShrinkFilm/save"
     }
 }

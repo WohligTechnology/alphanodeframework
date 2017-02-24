@@ -1,10 +1,9 @@
 {
-    "title": "Create PP/PE BAGS & LINERS",
-    "name": "Products",
-    "jsonPage": "viewProducts",
+    "title": "Edit SpecialityFilms",
+    "jsonPage": "viewSpecialityFilms",
     "desciption": "",
-    "pageType": "create",
-    "urlFields": ["Products"],
+    "pageType": "edit",
+    "urlFields": ["_id"],
     "fields": [{
         "name": "Select",
         "type": "tags",
@@ -16,27 +15,17 @@
         "dropDownField": "",
         "dropDownType": "single",
         "dropDown": ["Flexible", "Rigid"]
-    },{
-        "name": "Desktop Image(1500 x 329px)",
+    }, {
+        "name": "Image(1600 x 713px)",
         "type": "image",
-        "tableRef": "desktopimage",
+        "tableRef": "image",
         "option": "single",
-        "size": "1500 x 329px",
+        "size": "1600 x 900px",
         "placeholder": "Enter Desktop Image",
         "id": "input1",
         "validation": ["", "trim", ""],
         "url": ""
-    }, {
-        "name": "Mobile Image(1080 x 1920px)",
-        "type": "image",
-        "tableRef": "mobileimage",
-        "option": "single",
-        "size": "1080 x 1920px",
-        "placeholder": "Enter Mobile Image",
-        "id": "input1",
-        "validation": ["", "trim", ""],
-        "url": ""
-    }, {
+    },  {
         "name": "Content",
         "type": "wysiwyg",
         "tableRef": "content",
@@ -47,11 +36,11 @@
     }],
     "action": [{
         "name": "submit",
-        "action": "submitWhatsHot",
+        "action": "submitSpecialityFilms",
         "stateName": {
             "page": "page",
             "json": {
-                "id": "viewProducts"
+                "id": "viewSpecialityFilms"
             }
         }
     }, {
@@ -60,11 +49,16 @@
         "stateName": {
             "page": "page",
             "json": {
-                "id": "viewProducts"
+                "id": "viewSpecialityFilms"
             }
         }
     }],
     "apiCall": {
-        "url": "Products/save"
+        "url": "SpecialityFilms/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "SpecialityFilms/getOne",
+        "params": "_id"
     }
 }

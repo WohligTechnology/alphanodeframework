@@ -1,0 +1,38 @@
+{
+    "title": "Agricultural Mulch Film",
+    "name": "Agricultural",
+    "jsonPage": "viewAgricultural",
+    "desciption": "",
+    "pageType": "Agriculturaledit",
+    "urlFields": ["_id"],
+    "fields": [],
+    "action": [{
+        "name": "submit",
+        "action": "submitAgricultural",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewAgricultural"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewAgricultural"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Agricultural/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "Agricultural/getOne",
+        "params": "_id"
+    }
+
+
+}

@@ -1,0 +1,38 @@
+{
+    "title": "Collation Film",
+    "name": "Collation",
+    "jsonPage": "viewCollation",
+    "desciption": "",
+    "pageType": "Collationedit",
+    "urlFields": ["_id"],
+    "fields": [],
+    "action": [{
+        "name": "submit",
+        "action": "submitCollation",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewCollation"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewCollation"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Collation/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "Collation/getOne",
+        "params": "_id"
+    }
+
+
+}

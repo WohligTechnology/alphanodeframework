@@ -1,13 +1,13 @@
 {
-    "title": "Products",
-    "description": "List of Products",
+    "title": "PP/PE BAGS & LINERS",
+    "description": "List of PP/PE BAGS & LINERS",
     "pageType": "view",
     "sendIdWithCreate": true,
     "urlFields": ["_id"],
     "fields": [{
-        "name": "Product Name",
+        "name": "Selected Product",
         "isSort": "",
-        "tableRef": "name"
+        "tableRef": "pselect"
     }, {
         "name": "Desktop Image",
         "type": "image",
@@ -18,10 +18,6 @@
         "type": "image",
         "isSort": "",
         "tableRef": "mobileimage"
-    },{
-        "name": "Selected Product",
-        "isSort": "",
-        "tableRef": "pselect"
     }],
     "action": [{
         "name": "edit",

@@ -1,10 +1,10 @@
 {
-    "title": "Create PP/PE BAGS & LINERS",
-    "name": "Products",
-    "jsonPage": "viewProducts",
+    "title": "Edit POF Shrink Film",
+    "name": "ShrinkFilm",
+    "jsonPage": "viewShrinkFilm",
     "desciption": "",
-    "pageType": "create",
-    "urlFields": ["Products"],
+    "pageType": "ShrinkFilmedit",
+    "urlFields": ["_id"],
     "fields": [{
         "name": "Select",
         "type": "tags",
@@ -16,7 +16,15 @@
         "dropDownField": "",
         "dropDownType": "single",
         "dropDown": ["Flexible", "Rigid"]
-    },{
+    },  {
+        "name": "Content",
+        "type": "wysiwyg",
+        "tableRef": "content",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["", "trim", ""],
+        "url": ""
+    }, {
         "name": "Desktop Image(1500 x 329px)",
         "type": "image",
         "tableRef": "desktopimage",
@@ -36,22 +44,14 @@
         "id": "input1",
         "validation": ["", "trim", ""],
         "url": ""
-    }, {
-        "name": "Content",
-        "type": "wysiwyg",
-        "tableRef": "content",
-        "placeholder": "Enter name",
-        "id": "input1",
-        "validation": ["", "trim", ""],
-        "url": ""
     }],
     "action": [{
         "name": "submit",
-        "action": "submitWhatsHot",
+        "action": "submitShrinkFilm",
         "stateName": {
             "page": "page",
             "json": {
-                "id": "viewProducts"
+                "id": "viewShrinkFilm"
             }
         }
     }, {
@@ -60,11 +60,18 @@
         "stateName": {
             "page": "page",
             "json": {
-                "id": "viewProducts"
+                "id": "viewShrinkFilm"
             }
         }
     }],
     "apiCall": {
-        "url": "Products/save"
+        "url": "ShrinkFilm/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "ShrinkFilm/getOne",
+        "params": "_id"
     }
+
+
 }

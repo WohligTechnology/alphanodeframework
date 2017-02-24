@@ -1,29 +1,21 @@
 var schema = new Schema({
-
-    name: {
+    pselect: {
+        type: String,
+        enum: ["Flexible", "Rigid"]
+    },
+   content: {
         type: String,
         default: ""
     },
-
-    content: {
+    image: {
         type: String
-    },
-
-    order: {
-        type: Number,
-        default: 0
-    },
-
-    status: {
-        type: String,
-        enum: ["true", "false"]
     }
 });
 
 schema.plugin(deepPopulate, {});
 schema.plugin(uniqueValidator);
 schema.plugin(timestamps);
-module.exports = mongoose.model('Testimonial', schema);
+module.exports = mongoose.model('SpecialityFilms', schema);
 
 var exports = _.cloneDeep(require("sails-wohlig-service")(schema));
 var model = {};

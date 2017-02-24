@@ -1,10 +1,10 @@
 {
-    "title": "Create PP/PE BAGS & LINERS",
-    "name": "Products",
-    "jsonPage": "viewProducts",
+    "title": "Edit PET Bottles",
+    "name": "Bottles",
+    "jsonPage": "viewBottles",
     "desciption": "",
-    "pageType": "create",
-    "urlFields": ["Products"],
+    "pageType": "Bottlesedit",
+    "urlFields": ["_id"],
     "fields": [{
         "name": "Select",
         "type": "tags",
@@ -16,7 +16,15 @@
         "dropDownField": "",
         "dropDownType": "single",
         "dropDown": ["Flexible", "Rigid"]
-    },{
+    },  {
+        "name": "Content",
+        "type": "wysiwyg",
+        "tableRef": "content",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["", "trim", ""],
+        "url": ""
+    }, {
         "name": "Desktop Image(1500 x 329px)",
         "type": "image",
         "tableRef": "desktopimage",
@@ -36,22 +44,14 @@
         "id": "input1",
         "validation": ["", "trim", ""],
         "url": ""
-    }, {
-        "name": "Content",
-        "type": "wysiwyg",
-        "tableRef": "content",
-        "placeholder": "Enter name",
-        "id": "input1",
-        "validation": ["", "trim", ""],
-        "url": ""
     }],
     "action": [{
         "name": "submit",
-        "action": "submitWhatsHot",
+        "action": "submitBottles",
         "stateName": {
             "page": "page",
             "json": {
-                "id": "viewProducts"
+                "id": "viewBottles"
             }
         }
     }, {
@@ -60,11 +60,18 @@
         "stateName": {
             "page": "page",
             "json": {
-                "id": "viewProducts"
+                "id": "viewBottles"
             }
         }
     }],
     "apiCall": {
-        "url": "Products/save"
+        "url": "Bottles/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "Bottles/getOne",
+        "params": "_id"
     }
+
+
 }

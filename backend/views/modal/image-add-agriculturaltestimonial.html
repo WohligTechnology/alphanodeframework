@@ -5,7 +5,7 @@
                 <i class="ln-cross"></i>
             </a>
         </div>
-        <h5 class="modal-title">Edit Photo</h5>
+        <h5 class="modal-title">Add Testimonial</h5>
     </div>
     <div class="modal-body">
         <div class="row">
@@ -13,19 +13,19 @@
                 <div>
                     <div class="form-group">
                         <label>Name</label>
-                        <input type="text" name="name" placeholder="Enter Name" ng-model="datainfo.name" class="form-control" ng-required="type.required"
+                        <input type="text" name="name" placeholder="Enter Name" ng-model="newtestimonialinfo.name" class="form-control" ng-required="type.required"
                             ng-disabled="">
                             <div class="error-msg " ng-show="detailForm[type.tableRef].$invalid &amp;&amp; detailForm[type.tableRef].$touched">Please enter Name</div>
                     </div>
                     <div class="form-group">
                         <label>Company Name</label>
-                        <input type="text" name="cname" placeholder="Enter Comapny Name" ng-model="datainfo.cname" class="form-control" ng-required="type.required"
+                        <input type="text" name="cname" placeholder="Enter Company Name" ng-model="newtestimonialinfo.cname" class="form-control" ng-required="type.required"
                             ng-disabled="">
                             <div class="error-msg " ng-show="detailForm[type.tableRef].$invalid &amp;&amp; detailForm[type.tableRef].$touched">Please enter Name</div>
                     </div>
                     <div class="form-group">
                         <label>City</label>
-                        <input type="text" name="city" placeholder="Enter City" ng-model="datainfo.city" class="form-control" ng-required="type.required"
+                        <input type="text" name="city" placeholder="Enter City" ng-model="newtestimonialinfo.city" class="form-control" ng-required="type.required"
                             ng-disabled="">
                             <div class="error-msg " ng-show="detailForm[type.tableRef].$invalid &amp;&amp; detailForm[type.tableRef].$touched">Please enter Name</div>
                     </div>
@@ -33,15 +33,15 @@
                         <label>Content</label>
                         <label>{{type.name}} <span ng-show="type.required">*</span></label>
                         <fieldset ng-disabled="true">
-                            <textarea ui-tinymce="tinymceOptions" name="{{type.tableRef}}" placeholder="{{type.placeholder}}" ng-model="datainfo.content"
+                            <textarea ui-tinymce="tinymceOptions" name="{{type.tableRef}}" placeholder="{{type.placeholder}}" ng-model="newtestimonialinfo.content"
                                 ng-required="type.required" readonly></textarea>
                         </fieldset>
                         <div class="error-msg" ng-show="detailForm[type.tableRef].$invalid && detailForm[type.tableRef].$touched">Please enter valid {{type.name}}</div>
                     </div>
                     <div class="form-group">
                         <label>Order</label>
-                        <input type="number" name="order" placeholder="Enter order" ng-model="datainfo.order" class="form-control"
-                            ng-required="type.required" ng-disabled="">
+                        <input type="number" name="order" placeholder="Enter order" ng-model="newtestimonialinfo.order" class="form-control" ng-required="type.required"
+                            ng-disabled="">
                             <div class="error-msg " ng-show="detailForm[type.tableRef].$invalid &amp;&amp; detailForm[type.tableRef].$touched">Please enter valid order</div>
                     </div>
                     <div>
@@ -50,7 +50,7 @@
                             <!--<multiple-select name="state" required="" ng-model="" ng-name="name[type.tableRef]" url="Project/search" api="searchCall"
                                 ng-if="!type.filterField"></multiple-select>
                         </div>-->
-                            <select ng-model="datainfo.status" class="form-control">{{datainfo.status}} 
+                            <select ng-model="newtestimonialinfo.status" class="form-control">{{newtestimonialinfo.status}} 
                                 <option ng-repeat="y in status" value="{{y}}"> {{y}}</option>
                             </select>
                         </div>
@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <button class="btn btn-primary btn-save " type="submit" ng-disabled="modalForm.$invalid" ng-click="saveEditTestimonial(datainfo._id,datainfo.name,datainfo.cname,datainfo.city,datainfo.content,datainfo.order,datainfo.status)">Save</button>
+                <button class="btn btn-primary btn-save " type="submit" ng-disabled="modalForm.$invalid" ng-click="saveAgriculturalTestimonial(newtestimonialinfo._id,newtestimonialinfo.name,newtestimonialinfo.cname,newtestimonialinfo.city,newtestimonialinfo.content,newtestimonialinfo.order,newtestimonialinfo.status)">Save</button>
                 <button class="btn btn-primary btn-danger" type="submit" ng-click="closeBox()">Cancel</button>
             </div>
         </div>

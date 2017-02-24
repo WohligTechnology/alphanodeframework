@@ -1,6 +1,6 @@
 {
-    "title": "Create Testimonials",
-    "jsonPage": "viewTestimonial",
+    "title": "Create Collation",
+    "jsonPage": "viewCollation",
     "desciption": "",
     "pageType": "create",
     "fields": [{
@@ -9,13 +9,29 @@
         "tableRef": "name",
         "placeholder": "Enter Name",
         "id": "input1",
-        "validation": ["required", "trim", "unique"],
+        "validation": ["", "trim", ""],
+        "url": ""
+    }, {
+        "name": "Comapny Name",
+        "type": "text",
+        "tableRef": "cname",
+        "placeholder": "Enter Name",
+        "id": "input1",
+        "validation": ["", "trim", ""],
+        "url": ""
+    }, {
+        "name": "City",
+        "type": "text",
+        "tableRef": "city",
+        "placeholder": "Enter Name",
+        "id": "input1",
+        "validation": ["", "trim", ""],
         "url": ""
     }, {
         "name": "Content",
         "type": "wysiwyg",
         "tableRef": "content",
-        "placeholder": "Enter name",
+        "placeholder": "Enter content",
         "id": "input1",
         "validation": ["", "trim", ""],
         "url": ""
@@ -39,6 +55,26 @@
         "dropDownType": "single",
         "onView": true,
         "dropDown": ["true", "false"]
+    },{
+        "name": "Image(1626 x 541px)",
+        "type": "image",
+        "tableRef": "image",
+        "option": "single",
+        "size": "1626 x 541px",
+        "placeholder": "Enter Image",
+        "id": "input1",
+        "validation": ["", "trim", ""],
+        "url": ""
+    },{
+        "name": "Thumbnail(210 x 110px)",
+        "type": "image",
+        "tableRef": "thumbimage",
+        "option": "single",
+        "size": "210 x 110px",
+        "placeholder": "Enter Thumbnail Image",
+        "id": "input1",
+        "validation": ["", "trim", ""],
+        "url": ""
     }],
     "action": [{
         "name": "submit",
@@ -46,7 +82,7 @@
         "stateName": {
             "page": "page",
             "json": {
-                "id": "viewTestimonial"
+                "id": "viewCollation"
             }
         }
     }, {
@@ -55,11 +91,11 @@
         "stateName": {
             "page": "page",
             "json": {
-                "id": "viewTestimonial"
+                "id": "viewCollation"
             }
         }
     }],
     "apiCall": {
-        "url": "Testimonial/save"
+        "url": "Collation/save"
     }
 }

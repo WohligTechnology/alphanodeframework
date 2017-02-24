@@ -1,29 +1,30 @@
 {
-    "title": "Testimonial",
-    "description": "List of Testimonial",
+    "title": "POF Shrink Film",
+    "description": "List of POF Shrink Film",
     "pageType": "view",
     "sendIdWithCreate": true,
     "urlFields": ["_id"],
     "fields": [{
-        "name": "Name",
-        "type": "text",
+        "name": "Selected Product",
         "isSort": "",
-        "tableRef": "name"
+        "tableRef": "pselect"
     }, {
-        "name": "Order",
+        "name": "Desktop Image",
+        "type": "image",
         "isSort": "",
-        "tableRef": "order"
+        "tableRef": "desktopimage"
     }, {
-        "name": "Status",
+        "name": "Mobile Image",
+        "type": "image",
         "isSort": "",
-        "tableRef": "status"
+        "tableRef": "mobileimage"
     }],
     "action": [{
         "name": "edit",
         "icon": "fa-pencil",
         "buttonClass": "btn-primary",
-        "type": "page",
-        "action": "editTestimonial",
+        "type": "shrinkpage",
+        "action": "editShrinkFilm",
         "fieldsToSend": {
             "_id": "_id"
         }
@@ -32,9 +33,9 @@
         "icon": "fa-trash",
         "buttonClass": "btn-danger",
         "type": "apiCallConfirm",
-        "title": "Delete Testimonial",
-        "content": "Are you sure you want to delete Testimonial?",
-        "api": "Testimonial/delete",
+        "title": "Delete ShrinkFilm",
+        "content": "Are you sure you want to delete ShrinkFilm?",
+        "api": "ShrinkFilm/delete",
         "fieldsToSend": {
             "name": "_id",
             "value": "_id"
@@ -45,10 +46,10 @@
         "icon": "plus",
         "class": "btn-success",
         "type": "page",
-        "action": "createTestimonial"
+        "action": "createShrinkFilm"
     }],
     "apiCall": {
-        "url": "Testimonial/search",
+        "url": "ShrinkFilm/search",
         "params": "_id"
     }
 }

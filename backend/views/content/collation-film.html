@@ -1,4 +1,4 @@
-<div ng-controller="ProductsDetailCtrl">
+<div ng-controller="CollationDetailCtrl">
     <div class="heading-sec">
         <div class="row">
             <div class="col-md-4 column">
@@ -29,7 +29,7 @@
                                         </div>
                                         <div>
                                             <div>
-                                                <a class=" btn btn-primary pull-right ml-10" ng-click="addBoxProductsImage(json.keyword._id)">Add New</a>
+                                                <a class=" btn btn-primary pull-right ml-10" ng-click="addBoxCollationImage(json.keyword._id)">Add New</a>
                                                 <span style="float:right;width:200px; "><input type="search " class="form-control" placeholder="Search... " ng-model="search.text "> </span>
                                             </div>
                                             <div class="sec">
@@ -56,10 +56,10 @@
                                                                         <img ng-src="http://wohlig.io/api/upload/readFile?file={{photo.thumbimage}}" style="width:150px;height:100px;">
                                                                     </td>
                                                                     <td>
-                                                                        <a class="btn btn-primary" ng-click="editBoxCustomProductsPhotos(photo)">
+                                                                        <a class="btn btn-primary" ng-click="editBoxCustomCollationPhotos(photo)">
                                                                             <i class="fa fa-pencil"></i>
                                                                         </a>
-                                                                        <a class="btn btn-danger" ng-click="removeProductsPhotos(photo.image,photo.thumbimage,json.keyword._id)">
+                                                                        <a class="btn btn-danger" ng-click="removeCollationPhotos(photo.image,photo.thumbimage,json.keyword._id)">
                                                                             <i class="fa fa-trash"></i>
                                                                         </a>
                                                                     </td>
@@ -73,7 +73,7 @@
                                     </div>
                                     <div>
                                         <div>
-                                            <a class=" btn btn-primary pull-right ml-10" ng-click="addBoxTestimonial(json.keyword._id)">Add New</a>
+                                            <a class=" btn btn-primary pull-right ml-10" ng-click="addBoxCollationTestimonial(json.keyword._id)">Add New</a>
                                             <span style="float:right;width:200px; "><input type="search " class="form-control" placeholder="Search... " ng-model="search.text "> </span>
                                         </div>
                                         <div class="sec">
@@ -108,10 +108,10 @@
                                                                     {{photo.status}}
                                                                 </td>
                                                                 <td>
-                                                                    <a class="btn btn-primary" ng-click="editBoxCustomTestimonial(photo)">
+                                                                    <a class="btn btn-primary" ng-click="editBoxCustomCollationTestimonial(photo)">
                                                                         <i class="fa fa-pencil"></i>
                                                                     </a>
-                                                                    <a class="btn btn-danger" ng-click="removeTestimonial(photo._id,json.keyword._id)">
+                                                                    <a class="btn btn-danger" ng-click="removeCollationTestimonial(photo._id,json.keyword._id)">
                                                                         <i class="fa fa-trash"></i>
                                                                     </a>
                                                                 </td>
@@ -123,10 +123,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="text-center mt20 odd-even-button ">
+                                <!--<div class="text-center mt20 odd-even-button ">
                                     <button class="btn btn-default " type="submit " ng-click="saveData(data) " ng-disabled="detailForm.$invalid ">Save</button>
                                     <button class="btn btn-default " ng-click="onCancel(json.json.action[1].stateName) ">Cancel</button>
-                                </div>
+                                </div>-->
                         </form>
                         </div>
                     </div>

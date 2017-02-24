@@ -1,5 +1,5 @@
 {
-    "title": "Edit Products",
+    "title": "Edit PP/PE BAGS & LINERS",
     "name": "Products",
     "jsonPage": "viewProducts",
     "desciption": "",
@@ -16,14 +16,6 @@
         "dropDownField": "",
         "dropDownType": "single",
         "dropDown": ["Flexible", "Rigid"]
-    }, {
-        "name": "Product Name",
-        "type": "text",
-        "tableRef": "name",
-        "placeholder": "Enter Name",
-        "id": "name",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
     }, {
         "name": "Content",
         "type": "wysiwyg",

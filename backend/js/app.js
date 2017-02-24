@@ -19,74 +19,98 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
     $stateProvider
 
         .state('dashboard', {
-        url: "/dashboard",
-        templateUrl: "views/template.html",
-        controller: 'DashboardCtrl',
-    })
+            url: "/dashboard",
+            templateUrl: "views/template.html",
+            controller: 'DashboardCtrl',
+        })
 
-    .state('login', {
-        url: "/login",
-        templateUrl: "views/login.html",
-        controller: 'LoginCtrl'
-    })
+        .state('login', {
+            url: "/login",
+            templateUrl: "views/login.html",
+            controller: 'LoginCtrl'
+        })
 
-    .state('page', {
-        url: "/page/:id/{page:.*}/{keyword:.*}",
-        templateUrl: "views/template.html",
-        controller: 'PageJsonCtrl'
-    })
+        .state('page', {
+            url: "/page/:id/{page:.*}/{keyword:.*}",
+            templateUrl: "views/template.html",
+            controller: 'PageJsonCtrl'
+        })
 
-    .state('loginapp', {
-        url: "/login/:id",
-        templateUrl: "views/login.html",
-        controller: 'LoginCtrl'
-    })
+        .state('loginapp', {
+            url: "/login/:id",
+            templateUrl: "views/login.html",
+            controller: 'LoginCtrl'
+        })
 
-    .state('country-list', {
-        url: "/country-list/{page:.*}/{keyword:.*}",
-        templateUrl: "views/template.html",
-        controller: 'CountryCtrl',
-        params: {
-            page: "1",
-            keyword: ""
-        }
-    })
+        .state('country-list', {
+            url: "/country-list/{page:.*}/{keyword:.*}",
+            templateUrl: "views/template.html",
+            controller: 'CountryCtrl',
+            params: {
+                page: "1",
+                keyword: ""
+            }
+        })
 
-    .state('createcountry', {
-        url: "/country-create",
-        templateUrl: "views/template.html",
-        controller: 'CreateCountryCtrl'
-    })
+        .state('createcountry', {
+            url: "/country-create",
+            templateUrl: "views/template.html",
+            controller: 'CreateCountryCtrl'
+        })
 
-    .state('editcountry', {
-        url: "/country-edit/:id",
-        templateUrl: "views/template.html",
-        controller: 'EditCountryCtrl'
-    })
+        .state('editcountry', {
+            url: "/country-edit/:id",
+            templateUrl: "views/template.html",
+            controller: 'EditCountryCtrl'
+        })
 
-    .state('schema-creator', {
-        url: "/schema-creator",
-        templateUrl: "views/template.html",
-        controller: 'SchemaCreatorCtrl'
-    })
+        .state('schema-creator', {
+            url: "/schema-creator",
+            templateUrl: "views/template.html",
+            controller: 'SchemaCreatorCtrl'
+        })
 
-    .state('excel-upload', {
-        url: "/excel-upload/:model",
-        templateUrl: "views/template.html",
-        controller: 'ExcelUploadCtrl'
-    })
+        .state('excel-upload', {
+            url: "/excel-upload/:model",
+            templateUrl: "views/template.html",
+            controller: 'ExcelUploadCtrl'
+        })
 
-    .state('productspage', {
-      url: "/page/:id/{page:.*}/{keyword:.*}",
-      templateUrl: "views/template.html",
-      controller: 'ProductsDetailCtrl'
-    })
+        .state('productspage', {
+            url: "/page/:id/{page:.*}/{keyword:.*}",
+            templateUrl: "views/template.html",
+            controller: 'ProductsDetailCtrl'
+        })
 
-    .state('jagz', {
-        url: "/jagz",
-        templateUrl: "views/jagz.html",
-        controller: 'JagzCtrl'
-    });
+        .state('shrinkpage', {
+            url: "/page/:id/{page:.*}/{keyword:.*}",
+            templateUrl: "views/template.html",
+            controller: 'ShrinkDetailCtrl'
+        })
+
+        .state('bottlespage', {
+            url: "/page/:id/{page:.*}/{keyword:.*}",
+            templateUrl: "views/template.html",
+            controller: 'BottlesDetailCtrl'
+        })
+
+        .state('collationpage', {
+            url: "/page/:id/{page:.*}/{keyword:.*}",
+            templateUrl: "views/template.html",
+            controller: 'CollationDetailCtrl'
+        })
+        
+        .state('agriculturalpage', {
+            url: "/page/:id/{page:.*}/{keyword:.*}",
+            templateUrl: "views/template.html",
+            controller: 'AgriculturalDetailCtrl'
+        })
+
+        .state('jagz', {
+            url: "/jagz",
+            templateUrl: "views/jagz.html",
+            controller: 'JagzCtrl'
+        });
 
     $urlRouterProvider.otherwise("/dashboard");
     $locationProvider.html5Mode(isproduction);
@@ -234,7 +258,7 @@ firstapp.directive('uploadImage', function ($http, $filter, $timeout) {
                     },
                     transformRequest: angular.identity
                 }).then(function (data) {
-                    data=data.data;
+                    data = data.data;
                     $scope.uploadStatus = "uploaded";
                     if ($scope.isMultiple) {
 

@@ -54,21 +54,20 @@ var schema = new Schema({
             enum: ["true", "false"]
         }
     }]
-
 });
 
 schema.plugin(deepPopulate, {});
 schema.plugin(uniqueValidator);
 schema.plugin(timestamps);
-module.exports = mongoose.model('Products', schema);
+module.exports = mongoose.model('Bottles', schema);
 
 var exports = _.cloneDeep(require("sails-wohlig-service")(schema));
 var model = {
 
-    saveProductsPhotos: function (data, callback) {
+    saveBottlesPhotos: function (data, callback) {
 
         console.log(data);
-        Products.findOneAndUpdate({
+        Bottles.findOneAndUpdate({
             _id: data._id
         }, {
             $push: {
@@ -100,10 +99,10 @@ var model = {
         })
     },
 
-    removeProductsPhotos: function (data, callback) {
+    removeBottlesPhotos: function (data, callback) {
 
         console.log("DATA", data);
-        Products.update({
+        Bottles.update({
 
             "_id": data._id,
             "gallery": {
@@ -125,17 +124,14 @@ var model = {
                 console.log(err);
                 callback(err, null);
             } else {
-
-
                 callback(null, updated);
             }
         });
     },
 
-    findOneProducts: function (data, callback) {
 
-
-        Products.findOne({
+    findOneBottles: function (data, callback) {
+        Bottles.findOne({
             _id: data._id
         }).deepPopulate("gallery").exec(function (err, found) {
 
@@ -153,14 +149,14 @@ var model = {
                     });
                 }
             }
-
         })
     },
-    updateGalleryPhotos: function (data, callback) {
+
+    updateBottlesGalleryPhotos: function (data, callback) {
 
         console.log("DATA", data);
 
-        Products.update({
+        Bottles.update({
             _id: data._id,
 
             "gallery": {
@@ -181,8 +177,6 @@ var model = {
                 console.log(err);
                 callback(err, null);
             } else {
-
-
                 callback(null, updated);
             }
         });
@@ -192,10 +186,10 @@ var model = {
     //testimonial-----
 
 
-    saveTestimonial: function (data, callback) {
+    saveBottlesTestimonial: function (data, callback) {
 
         console.log(data);
-        Products.findOneAndUpdate({
+        Bottles.findOneAndUpdate({
             _id: data._id
         }, {
             $push: {
@@ -233,10 +227,10 @@ var model = {
         })
     },
 
-    removeTestimonial: function (data, callback) {
+    removeBottlesTestimonial: function (data, callback) {
 
         console.log("DATA", data);
-        Products.update({
+        Bottles.update({
             "_id": data._id,
 
             "testimonial": {
@@ -263,10 +257,10 @@ var model = {
         });
     },
 
-    findOneTestimonial: function (data, callback) {
+    findOneBottlesTestimonial: function (data, callback) {
 
 
-        Products.findOne({
+        Bottles.findOne({
             _id: data._id
         }).deepPopulate("testimonial").exec(function (err, found) {
 
@@ -288,12 +282,12 @@ var model = {
         })
     },
 
-    updateTestimonial: function (data, callback) {
+    updateBottlesTestimonial: function (data, callback) {
 
         console.log("DATA", data);
         //var testData = {};
         //testData.name  = data.name
-        Products.update({
+        Bottles.update({
             _id: data._id,
 
             "testimonial": {
@@ -316,12 +310,10 @@ var model = {
                 console.log(err);
                 callback(err, null);
             } else {
-
-
                 callback(null, updated);
             }
         });
-    },
+    }
 
 };
 module.exports = _.assign(module.exports, exports, model);

@@ -40,6 +40,30 @@ jsonservicemod.service('JsonService', function ($http, TemplateService, $state, 
             TemplateService.changecontent("gallery-detail");
           }
           break;
+        case "ShrinkFilmedit":
+          {
+            console.log("IN components EDIT");
+            TemplateService.changecontent("shrink-film");
+          }
+          break;
+        case "Bottlesedit":
+          {
+            console.log("IN components EDIT");
+            TemplateService.changecontent("bottles");
+          }
+          break;
+        case "Collationedit":
+          {
+            console.log("IN components EDIT");
+            TemplateService.changecontent("collation-film");
+          }
+          break;
+        case "Agriculturaledit":
+          {
+            console.log("IN components EDIT");
+            TemplateService.changecontent("agricultural");
+          }
+          break;
       }
       callback();
     });
@@ -108,6 +132,18 @@ jsonservicemod.service('JsonService', function ($http, TemplateService, $state, 
       } else if (action && action.type == "productspage") {
         console.log("IN productspage TYPE");
         $state.go("productspage", sendTo);
+      } else if (action && action.type == "shrinkpage") {
+        console.log("IN shrinkpage TYPE");
+        $state.go("shrinkpage", sendTo);
+      } else if (action && action.type == "bottlespage") {
+        console.log("IN bottlespage TYPE");
+        $state.go("bottlespage", sendTo);
+      } else if (action && action.type == "collationpage") {
+        console.log("IN collationpage TYPE");
+        $state.go("collationpage", sendTo);
+      } else if (action && action.type == "agriculturalpage") {
+        console.log("IN agriculturalpage TYPE");
+        $state.go("agriculturalpage", sendTo);
       } else if (action && action.type == "apiCallConfirm") {
         globalfunction.confDel(function (value2) {
           if (value2) {

@@ -1,32 +1,30 @@
 {
-    "title": "Company Statistics",
-    "description": "List of Company Statistics",
+    "title": "PET Bottles",
+    "description": "List of PET Bottles",
     "pageType": "view",
     "sendIdWithCreate": true,
     "urlFields": ["_id"],
     "fields": [{
-        "name": "Industries",
+        "name": "Selected Product",
         "isSort": "",
-        "tableRef": "industries"
+        "tableRef": "pselect"
     }, {
-        "name": "Polymer",
+        "name": "Desktop Image",
+        "type": "image",
         "isSort": "",
-        "tableRef": "polymer"
+        "tableRef": "desktopimage"
     }, {
-        "name": "Technologies",
+        "name": "Mobile Image",
+        "type": "image",
         "isSort": "",
-        "tableRef": "technologies"
-    }, {
-        "name": "Employees",
-        "isSort": "",
-        "tableRef": "employees"
+        "tableRef": "mobileimage"
     }],
     "action": [{
         "name": "edit",
         "icon": "fa-pencil",
         "buttonClass": "btn-primary",
-        "type": "page",
-        "action": "editProductStatistics",
+        "type": "bottlespage",
+        "action": "editBottles",
         "fieldsToSend": {
             "_id": "_id"
         }
@@ -35,9 +33,9 @@
         "icon": "fa-trash",
         "buttonClass": "btn-danger",
         "type": "apiCallConfirm",
-        "title": "Delete ProductStatistics",
-        "content": "Are you sure you want to delete ProductStatistics?",
-        "api": "ProductStatistics/delete",
+        "title": "Delete Bottles",
+        "content": "Are you sure you want to delete Bottles?",
+        "api": "Bottles/delete",
         "fieldsToSend": {
             "name": "_id",
             "value": "_id"
@@ -48,10 +46,10 @@
         "icon": "plus",
         "class": "btn-success",
         "type": "page",
-        "action": "createProductStatistics"
+        "action": "createBottles"
     }],
     "apiCall": {
-        "url": "ProductStatistics/search",
+        "url": "Bottles/search",
         "params": "_id"
     }
 }

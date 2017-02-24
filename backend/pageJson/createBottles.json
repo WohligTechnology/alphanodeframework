@@ -1,10 +1,10 @@
 {
-    "title": "Create PP/PE BAGS & LINERS",
-    "name": "Products",
-    "jsonPage": "viewProducts",
+    "title": "Create PET Bottles",
+    "name": "Bottles",
+    "jsonPage": "viewBottles",
     "desciption": "",
     "pageType": "create",
-    "urlFields": ["Products"],
+    "urlFields": ["Bottles"],
     "fields": [{
         "name": "Select",
         "type": "tags",
@@ -51,7 +51,7 @@
         "stateName": {
             "page": "page",
             "json": {
-                "id": "viewProducts"
+                "id": "viewBottles"
             }
         }
     }, {
@@ -60,11 +60,11 @@
         "stateName": {
             "page": "page",
             "json": {
-                "id": "viewProducts"
+                "id": "viewBottles"
             }
         }
     }],
     "apiCall": {
-        "url": "Products/save"
+        "url": "Bottles/save"
     }
 }

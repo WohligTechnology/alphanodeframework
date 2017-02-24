@@ -1,10 +1,10 @@
 {
-    "title": "Create PP/PE BAGS & LINERS",
-    "name": "Products",
-    "jsonPage": "viewProducts",
+    "title": "Create Speciality Film",
+    "name": "SpecialityFilms",
+    "jsonPage": "viewSpecialityFilms",
     "desciption": "",
     "pageType": "create",
-    "urlFields": ["Products"],
+    "urlFields": ["SpecialityFilms"],
     "fields": [{
         "name": "Select",
         "type": "tags",
@@ -16,23 +16,13 @@
         "dropDownField": "",
         "dropDownType": "single",
         "dropDown": ["Flexible", "Rigid"]
-    },{
-        "name": "Desktop Image(1500 x 329px)",
+    }, {
+        "name": "Image(1500 x 329px)",
         "type": "image",
-        "tableRef": "desktopimage",
+        "tableRef": "image",
         "option": "single",
         "size": "1500 x 329px",
         "placeholder": "Enter Desktop Image",
-        "id": "input1",
-        "validation": ["", "trim", ""],
-        "url": ""
-    }, {
-        "name": "Mobile Image(1080 x 1920px)",
-        "type": "image",
-        "tableRef": "mobileimage",
-        "option": "single",
-        "size": "1080 x 1920px",
-        "placeholder": "Enter Mobile Image",
         "id": "input1",
         "validation": ["", "trim", ""],
         "url": ""
@@ -51,7 +41,7 @@
         "stateName": {
             "page": "page",
             "json": {
-                "id": "viewProducts"
+                "id": "viewSpecialityFilms"
             }
         }
     }, {
@@ -60,11 +50,11 @@
         "stateName": {
             "page": "page",
             "json": {
-                "id": "viewProducts"
+                "id": "viewSpecialityFilms"
             }
         }
     }],
     "apiCall": {
-        "url": "Products/save"
+        "url": "SpecialityFilms/save"
     }
 }
