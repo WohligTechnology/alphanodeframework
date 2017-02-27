@@ -33,16 +33,27 @@
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    },{
-        "name": "RelatedImage",
+    }, {
+        "name": "Related Image(417 x 258px)",
         "type": "image",
         "tableRef": "relatedimage",
         "option": "single",
-        "size": "777 x 418px",
-        "placeholder": "Enter Logo",
+        "size": "417 x 258px",
+        "placeholder": "Enter Related Image",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
+    }, {
+        "name": "Related News",
+        "type": "tags",
+        "tableRef": "relatednews",
+        "placeholder": "Enter Related news",
+        "id": "relatednews",
+        "validation": ["", "trim", ""],
+        "url": "LatestNews/search",
+        "dropDownField": "name",
+        "dropDownType": "multiple",
+        "onView": true
     }, {
         "name": "Content",
         "type": "wysiwyg",

@@ -367,6 +367,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         };
 
         $scope.saveData = function (formData) {
+            console.log("in edit clicked");
+            
+            _.each($scope.json.json.fields, function(n){
+                if(n.type == "tags" && n.dropDownType == "multiple"){
+                    console.log(formData[n.tableRef]);
+                    $scope.newTags = [];
+                    _.each(formData[n.tableRef], function(m){
+                        $scope.newTags.push(m._id);
+                    })
+                    console.log($scope.newTags);
+                    formData[n.tableRef] = $scope.newTags;
+                    
+                }
+            })
             NavigationService.apiCall($scope.json.json.apiCall.url, formData, function (data) {
                 if (data.value === true) {
                     $scope.json.json.action[0].stateName.json.keyword = "";
@@ -530,6 +544,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }
 
         $scope.tagClicked = function (select, index) {
+            console.log("tag clicked");
             if ($scope.type.fieldType === "array") {
                 $scope.formData[$scope.type.tableRef] = [];
                 _.each(select, function (n) {

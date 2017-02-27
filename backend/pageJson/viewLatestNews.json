@@ -18,8 +18,8 @@
         "type": "image",
         "isSort": "",
         "tableRef": "innerpageimage"
-    }, {
-        "name": "Related Image",
+    },{
+        "name": "Realted Image",
         "type": "image",
         "isSort": "",
         "tableRef": "relatedimage"

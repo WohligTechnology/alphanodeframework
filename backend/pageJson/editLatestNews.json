@@ -34,15 +34,27 @@
         "validation": ["", "trim", ""],
         "url": ""
     }, {
-        "name": "Related Image(777 x 418px)",
+        "name": "Related Image(417 x 258px)",
         "type": "image",
         "tableRef": "relatedimage",
         "option": "single",
-        "size": "777 x 418px",
-        "placeholder": "Enter LatestNews Image",
+        "size": "417 x 258px",
+        "placeholder": "Enter Related Image",
         "id": "input1",
         "validation": ["", "trim", ""],
         "url": ""
+    }, {
+        "name": "Related News",
+        "type": "tags",
+        "tableRef": "relatednews",
+        "placeholder": "Enter Related news",
+        "id": "status",
+        "validation": ["", "trim", ""],
+        "url": "LatestNews/search",
+        "fieldType": "array",
+        "dropDownField": "name",
+        "dropDownType": "multiple",
+        "onView": true
     }, {
         "name": "Content",
         "type": "wysiwyg",
