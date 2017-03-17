@@ -1,8 +1,4 @@
 var schema = new Schema({
-    name: {
-        type: String,
-        default: " "
-    },
     journeyimage: {
         type: String,
         default: ""
