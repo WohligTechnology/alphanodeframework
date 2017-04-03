@@ -1,12 +1,94 @@
-<ul class="nav navbar-nav">
+<ul class="nav navbar-nav hidden-xs">
   <li ng-repeat="menu in navigation" class="{{menu.classis}}">
-    <a ui-sref="{{menu.anchor}}" ng-if="menu.anchor">{{menu.name}}</a>
-    <a href="{{menu.link}}" ng-if="menu.link">{{menu.name}}</a>
-    <ul class="dropdown-menu" ng-if="menu.subnav!='';">
-      <li ng-repeat="submenu in menu.subnav">
-        <a ui-serf="{{submenu.anchor}}" ng-if="submenu.anchor">{{submenu.name}}</a>
-        <a herf="{{submenu.link}}" ng-if="submenu.link">{{submenu.name}}</a>
+    <a ui-sref="{{menu.anchor}}" ng-if="menu.anchor" class="dropdown-toggle" >{{menu.name}}</a>
+    <a href="{{menu.link}}" ng-if="menu.link" class="dropdown-toggle" >{{menu.name}}</a>
+    <ul class="drop-menu dropdown-menu" ng-if="menu.subnav!='';">
+      <li ng-repeat="submenu in menu.subnav" class="dropdown-submenu" ng-class="{{submenu.classis}}">
+        <a ui-sref="{{submenu.anchor}}" ng-if="submenu.anchor" class="dropdown-toggle" ui-sref-active="{class: 'active', state: '{{submenu.anchor}}'}">{{submenu.name}}</a>
+        <a href="{{submenu.link}}" ng-if="submenu.link" class="dropdown-toggle">{{submenu.name}}</a>
+        <ul class=" sub-sec" ng-if="submenu.subnavs!='';">
+          <li ng-repeat="sub in submenu.subnavs" class="{{sub.classis}}">
+            <a ui-sref="{{sub.anchor}}" ng-if="sub.anchor" ui-sref-active="{class: 'active', state: '{{sub.anchor}}'}">{{sub.name}}</a>
+            <a herf="{{sub.link}}" ng-if="sub.link">{{sub.name}}</a>
+          </li>
+        </ul>
       </li>
     </ul>
+  </li>
+</ul>
+<ul class="nav navbar-nav hidden-md hidden-lg hidden-sm">
+  <li>
+    <a ui-sref="" data-toggle="dropdown" class="dropdown-toggle">
+      overview
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a ui-sref="aboutus">
+          About Us
+        </a>
+      </li>
+      <li>
+        <a ui-sref="journey">
+          Journey
+        </a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="" data-toggle="dropdown" class="dropdown-toggle">
+      product
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a ui-sref="bags-liners">
+          PP/PE Bags & Liners
+        </a>
+      </li>
+      <li>
+        <a ui-sref="pof">
+        POF Shrink Film
+        </a>
+      </li>
+      <li>
+        <a ui-sref="speciality-film">
+        Speciality Films
+        </a>
+      </li>
+      <li>
+        <a ui-sref="pet">
+        PET Bottles
+        </a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a ui-sref="quality-policy">
+    Quality Policy
+    </a>
+  </li>
+  <li>
+    <a ui-sref="certifications">
+    Certifications
+    </a>
+  </li>
+  <li>
+    <a ui-sref="news">
+    news
+    </a>
+  </li>
+  <li>
+    <a ui-sref="events">
+    events
+    </a>
+  </li>
+  <li>
+    <a ui-sref="careers">
+      careers
+    </a>
+  </li>
+  <li>
+    <a ui-sref="contact-us">
+      contact us
+    </a>
   </li>
 </ul>

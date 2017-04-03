@@ -156,6 +156,7 @@ var model = {
 
         })
     },
+
     updateGalleryPhotos: function (data, callback) {
 
         console.log("DATA", data);
@@ -316,12 +317,32 @@ var model = {
                 console.log(err);
                 callback(err, null);
             } else {
-
-
                 callback(null, updated);
             }
         });
     },
+
+    //get all
+
+    getAll: function (data, callback) {
+        Products.find({}).exec(function (err, found) {
+
+            if (err) {
+
+                callback(err, null);
+            } else {
+
+                if (found) {
+                    console.log("Found", found);
+                    callback(null, found);
+                } else {
+                    callback(null, {
+                        message: "No Data Found"
+                    });
+                }
+            }
+        })
+    }
 
 };
 module.exports = _.assign(module.exports, exports, model);

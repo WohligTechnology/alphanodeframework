@@ -460,6 +460,27 @@ var model = {
                 callback(null, updated);
             }
         });
+    },
+    //get all
+
+    getAll: function (data, callback) {
+        Collation.find({}).exec(function (err, found) {
+
+            if (err) {
+
+                callback(err, null);
+            } else {
+
+                if (found) {
+                    console.log("Found", found);
+                    callback(null, found);
+                } else {
+                    callback(null, {
+                        message: "No Data Found"
+                    });
+                }
+            }
+        })
     }
 };
 module.exports = _.assign(module.exports, exports, model);

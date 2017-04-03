@@ -1,18 +1,28 @@
 <header>
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-                <a class="navbar-brand" ui-sref="home"><img src="/frontend/img/logo.png" alt="logo" width="20"> </a>
-            </div>
-            <div class="collapse navbar-collapse" id="nav-collapse">
-                <div ng-include="template.menu" class="template menu"></div>
-            </div>
+   <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid padding0">
+      <div class="row">
+        <div class="col-md-3 col-sm-3">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a  ui-sref="home"><img src="img/logo.png" alt="logo" class="logo"> </a>
+          </div>
         </div>
-    </nav>
+        <div class="col-md-9 col-sm-9">
+          <div class="collapse navbar-collapse" id="nav-collapse">
+                 <div ng-include="template.menu" class="template menu"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+</nav>
+<div class="social-fixed">
+  <a href="https://www.facebook.com/alphaplastomers/" target="_blank"><img src="img/facebook-logo.png" alt=""></a>
+  <a href="https://www.linkedin.com/company/alpha-group-india" target="_blank" class="mt-20"><img src="img/linkedin-logo.png" alt=""></a>
+</div>
 </header>

@@ -105,6 +105,21 @@ var controller = {
                 }
             })
         }
+    },
+
+    //get all
+
+    getAll: function (req, res) {
+        if (req.body) {
+            Collation.getAll(req.body, res.callback);
+        } else {
+            res.json({
+                value: false,
+                data: {
+                    message: "Invalid Request"
+                }
+            })
+        }
     }
 
 };

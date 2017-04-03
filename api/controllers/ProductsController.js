@@ -39,7 +39,7 @@ var controller = {
         }
     },
 
-     updateGalleryPhotos: function (req, res) {
+    updateGalleryPhotos: function (req, res) {
         if (req.body) {
             Products.updateGalleryPhotos(req.body, res.callback);
         } else {
@@ -52,9 +52,9 @@ var controller = {
         }
     },
 
-//testimonial
+    //testimonial
 
-saveTestimonial: function (req, res) {
+    saveTestimonial: function (req, res) {
         if (req.body) {
             Products.saveTestimonial(req.body, res.callback);
         } else {
@@ -93,7 +93,7 @@ saveTestimonial: function (req, res) {
         }
     },
 
-     updateTestimonial: function (req, res) {
+    updateTestimonial: function (req, res) {
         if (req.body) {
             Products.updateTestimonial(req.body, res.callback);
         } else {
@@ -105,6 +105,19 @@ saveTestimonial: function (req, res) {
             })
         }
     },
+
+    getAll: function (req, res) {
+        if (req.body) {
+            Products.getAll(req.body, res.callback);
+        } else {
+            res.json({
+                value: false,
+                data: {
+                    message: "Invalid Request"
+                }
+            })
+        }
+    }
 
 
 };

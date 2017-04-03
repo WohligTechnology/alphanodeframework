@@ -1,0 +1,65 @@
+<div class="careers">
+  <div class="banner">
+  <img src="img/careers/careers.jpg" alt="" class="img-responsive ban-full">
+  <!-- <img src="img/banner-ribbon.png" alt="" class="img-responsive banner-rib hidden-xs"> -->
+  </div>
+  <div class="red-sec">
+    <div class="container">
+      <div class="careers-sec">
+        <p>Our people drive us forward!</p>
+        <p>As we continue to grow, we are always seeking to identify exceptional individuals who share our entrepreneurial spirit, drive and passion for achievement. Alpha Plastomers offers careers in marketing, operations, manufacturing, finance and related support functions that work together to create a truly dynamic and successful organization.</p>
+        <p>Please get in touch with our HR department <a href="mailto:hr@alpha.co.in">hr@alpha.co.in</a> to learn more about current job opportunities.</p>
+      </div>
+    </div>
+  </div>
+    <div class="container">
+  <form class="form-sec" ng-submit="sendCareer(careerData);">
+      <h2 class="text-up font-revelution text-head color-red  ft-40 text-center">Work With Us</h2>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-2">
+        <div class="form-group">
+  <input type="text" class="form-control" ng-model="careerData.name" id="name" aplha-only placeholder="Enter Name" aplhaOnly required>         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4  col-md-offset-2">
+    <div class="form-group">
+      <input type="email" class="form-control" ng-model="careerData.email" id="email" placeholder="Enter Email" required>
+                                </div>
+      </div>
+      <div class="col-md-4">
+    <div class="form-group">
+   <input type="tel" class="form-control"  id="mobile" ng-model="careerData.mobile" placeholder="Mobile Number" minlength="10" maxlength="10"  only-digits required>   </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4  col-md-offset-2">
+    <div class="form-group">
+      <!-- <upload-image   ng-model="careerData.resume"  no-view class="upl-button">
+  </upload-image> -->
+  <upload-image   ng-model="careerData.resume"  required>
+</upload-image>
+    <label class="upl-label">BROWSE</label>
+
+
+    <!-- <div class="upload-btn text-right">
+      <span>UPLOAD YOUR RESUME</span>
+      <input id="upload" type="file" class="file form-control display-none" placeholder="UPLOAD YOUR RESUME">
+      <label for="upload" type="button" class="upl-label">BROWSE</label>
+    </div> -->
+    <!-- <label for="file">Choose a file</label> -->
+  </div>
+      </div>
+      <div class="col-md-4">
+    <div class="form-group">
+    <input type="text-area" class="form-control" rows="3" ng-model="careerData.message"  id="message" placeholder="MESSAGE">
+    <!-- <textarea class="form-control" rows="3" id="message" placeholder="Message"></textarea> -->
+     </div>
+      </div>
+    </div>
+  <div class="submit-sec text-center">
+    <button type="submit" class="btn btn-default sub-btn" >Submit</button>
+  </div>
+  </form>
+    </div>
+  </div>

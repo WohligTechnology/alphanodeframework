@@ -1,0 +1,108 @@
+<section>
+  <div class="banner">
+    <img src="img/news/news.jpg" alt="" class="img-resposive ban-full">
+  </div>
+</section>
+<section class="mt-60 mt35">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="nw-detail">
+          <div class="al-relative">
+          <img src="{{newDetailss.img}}" alt="" class="img-responsive">
+          <div class="date-sec">
+            <span>{{newDetailss.date}}</span>
+            <!-- <span>September 2016</span> -->
+          </div>
+          </div>
+<div class="nw-main-title">
+  <h3 class="color-red font-keem text-up"> {{newDetailss.title}}</h3>
+</div>
+<div class="nw-detail">
+  <p ng-bind-html="newDetailss.desc">
+  </p>
+  <p ng-bind-html="newDetailss.desc2"></p>
+  <p ng-bind-html="newDetailss.desc3">
+  </p>
+    <p ng-bind-html=newDetailss.desc4>
+  </p>
+
+    <p ng-bind-html=newDetailss.desc5>
+  </p>
+</div>
+
+        </div>
+
+      </div>
+
+
+
+
+<!-- ===================static part of news-details========================== -->
+
+      <!-- <div class="col-md-8">
+        <div class="nw-detail">
+          <div class="al-relative">
+          <img src="img/nw1.jpg" alt="" class="img-responsive">
+          <div class="date-sec">
+            <span>September 2016</span>
+          </div>
+          </div>
+<div class="nw-main-title">
+  <h1 class="color-red font-bold">  Meet Alpha’s Plastic Super Family in Mexico!</h1>
+</div>
+<div class="nw-detail">
+  <p>
+    The packaging industry as a whole is very boring. Because it is predominantly in the B2B sector, the scope for experimenting is less. Majority of the companies have named their products based on their scientific qualities, which makes them difficult to remember. Only people from within the industry get the hang of it over a period of time.
+  </p>
+
+  <p>
+    But, ALPHA has always believed in ‘Adding Value’ to their customers and the society at large. Why does this industry necessarily have to be boring? Why follow the same uninteresting naming convention? We decided to break the routine and do something interesting. Products will stimulate more curiosity if we add a face to them instead of giving them names based on their scientific properties. In order to differentiate Alpha from the rest, we created the Plastic Super Family, which is more relatable and spot- on entertaining. Each of the products have few distinct super powers, by which we mean the properties of Plastic, that represents a particular superhero and together they form the Plastic Super Family. PSF has 4 members - a father, Mother, teenage son and an elder daughter.
+  </p>
+  <p>The father, Mr. Protecto represents Safe & Secure shrink film that secures the content inside the packaging from dust and moisture. He provides security. Similarly, the mother of PSF is the face of our Stretch Films. With her ability to stretch, she safeguards good from damage during transportation. Pet bottles & jars are represented by Petty, the feather light daughter and the collation shrink film is characterized by Tuff, whose strength is his USP and his cape portrays its ability to get printed for branding.</p>
+  <p>
+    We are very excited to present our Plastic Super Family at the Pack Expo 2016 in Mexico. They are fun, entertaining and definitely the forerunners in their categories.
+  </p>
+</div>
+
+        </div>
+
+      </div> -->
+
+
+<!-- ===================static part of news-details========================== -->
+
+  <div class="col-md-4">
+<div class="rl-news">
+  <h2 class="color-red font-keem">
+    RELATED NEWS
+  </h2>
+    <div class="rl-nw hidden-xs" ng-repeat="data in relatedNews">
+      <img src="{{data.image}}" alt="" class="img-responsive" ui-sref="news-detail({id:data.id})" ng-if="data.id!=stateId">
+      <h4 class="color-red font-keem text-up" ng-if="data.id!=stateId">{{data.title}}</h4>
+    </div>
+
+    <!-- <div class="rl-nw">
+      <img src="img/news/3.jpg" alt="" class="img-responsive" ui-sref="news-detail({id:'3'})">
+      <h4 class="color-red font-keem text-up">Alpha Pharma Roorkee
+commissions ASB...</h4>
+    </div>
+    <div class="rl-nw">
+      <img src="img/news/4.jpg" alt="" class="img-responsive" ui-sref="news-detail({id:'4'})">
+      <h4 class="color-red font-keem text-up">First Annual Meet</h4>
+
+    </div>
+     -->
+     <div class="mob-slider hidden-lg hidden-md hidden-sm">
+       <flex-slider flex-slide="data in relatedNews track by $index" animation="slide" item-width="320" item-margin="60" animationloop="true" move="1" slideshow-Speed="2000">
+       <li>
+         <img src="{{data.image}}" alt="" class="img-responsive" ui-sref="news-detail({id:data.id})" ng-if="data.id!=stateId" noloading="true">
+         <h4 class="color-red font-keem text-up" ng-if="data.id!=stateId" noloading="true">{{data.title}}</h4>
+       </li>
+       </flex-slider>
+     </div>
+</div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,165 @@
+<div class="pet">
+    <div class="banner">
+        <img src="img/PET/pet.jpg" alt="" class="img-responsive ban-full">
+        <!-- <img src="img/banner-ribbon.png" alt="" class="img-responsive banner-rib hidden-xs"> -->
+    </div>
+    <div class="red-sec">
+        <div class="container">
+            <div class="careers-sec">
+                <p>Durable and Dependable <span>&trade;</span> PET Bottles &amp; Jars are extremely light-weight and come in multiple shapes. They assure no leakage and zero breakage.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="black-sec text-center">
+            <h2 class="text-up font-revelution text-head color-red ft-40">MARKETS</h2>
+            <div class="pdf-1 text-left">
+                <div class="pdf-in">
+              <a href="img/pdf/Pharmaceuticals.pdf" target="_blank"><img src="img/pdf-file.png" alt="" class="img-responsive display-inline">
+                <span>Pharmaceuticals</span></a>
+                </div>
+                <div class="pdf-in">
+                  <a href="img/pdf/cosmetic.pdf" target="_blank"><img src="img/pdf-file.png" alt="" class="img-responsive display-inline">
+                    <span>Cosmetics &amp; FMCG</span></a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="petslider">
+        <img src="img/black-ribbon.png" alt="" class="img-responsive test-banner hidden-xs">
+        <div class="container">
+            <div class="gallery-holder pd-41">
+                <h2 class="text-center text-up font-revelution text-head color-red ft-40">GALLERY</h2>
+                <div class="gal">
+                  <div class="slider1 hidden-xs">
+                    <flex-slider flex-slide="item in imageslider track by $index" animation="slide" animationloop="true" move="1" slideshow-Speed="3000" sync="#carousel" slider-id="slider"  slideshow="false">
+                        <li>
+                            <img ng-src="{{item.image}}" alt="">
+                        </li>
+                    </flex-slider>
+                  </div>
+<!-- mobileslider -->
+                  <div class="slider1 visible-xs">
+
+                      <flex-slider flex-slide="item in imageslider track by $index" animation="slide" animationloop="true" slideshow-Speed="3000">
+                        <li>
+                            <img ng-src="{{item.image}}" alt="">
+                        </li>
+                    </flex-slider>
+                  </div>
+
+                  <div class="text-center pdt10 visible-xs visible-sm">
+      								<a href="img/pdf/PET bottles.pdf" target="_blank"><button type="button" class="btn btn-default btn-brochure btn-part1 text-up">Download Brochure</button></a>
+      						</div>
+<!-- carousel -->
+                    <div class="slider2 hidden-xs">
+      <flex-slider flex-slide="item in imagethumb track by $index" animation="slide" item-width="228" item-margin="5" animationloop="true" move="1" slideshowSpeed=1000 direction-Nav="false" control-Nav="false" as-Nav-For="#slider" slider-id="carousel">
+                        <li>
+                          <div class="img-animated">
+                            <img ng-src="{{item.image}}" alt="" class="hover-sec">
+                          </div>
+                        </li>
+                    </flex-slider>
+
+  </div>
+                </div>
+
+            </div>
+        </div>
+      </div>
+
+        <div class="testimonial-sec">
+            <img src="img/black-ribbon1.png" alt="" class="img-responsive test-banner hidden-xs">
+            <div class="container">
+                <div class="profile-desc">
+                    <img src="img/comma.png" alt="" class="img-responsive test-comma hidden-xs">
+                    <h2 class="text-center text-up font-revelution text-head color-red ft-40">TESTIMONIALS</h2>
+                	<flex-slider flex-slide="item in flexprofile track by $index"  item-margin="0" slideshow= "false">
+                        <li>
+                            <div class="row pd100">
+                                <div class="col-md-3">
+                                    <div class="profile-img">
+                                        <img ng-src="{{item.image}} " alt=" " class="img-responsive ">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="profile-box">
+                                        <div class="profile-info">
+                                            <p>{{item.desc}}</p>
+                                            <h4>{{item.name}}</h4>
+                                            <p class="company">{{item.company}}</p>
+                                            <p class="location">{{item.location}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </flex-slider>
+                </div>
+            </div>
+        </div>
+
+        <div class="enquiry-form">
+            <a href="img/pdf/PET bottles.pdf" target="_blank"><button type="button" class="btn btn-default btn-brochure hidden-xs">Download Brochure</button></a>
+            <div class="container">
+                <div class="enquiry-sec text-center pdt-40">
+                    <h2 class="text-up font-revelution text-head color-red  ft-40">ENQUIRE NOW</h2>
+
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                          <form class="form-sec" ng-submit="sendEmail(contactus);">
+                                            <div class="row">
+                                                <div class="col-md-8 col-md-offset-2">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" ng-model="contactus.name" id="name" placeholder="Enter Name" aplha-only required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4  col-md-offset-2">
+                                                    <div class="form-group">
+                                                        <input type="email" class="form-control" ng-model="contactus.email" id="email" placeholder="Enter Email" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <input type="tel" class="form-control"  id="mobile" ng-model="contactus.mobile" placeholder="Mobile Number" minlength="10" maxlength="10"  only-digits required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4 col-md-offset-2 col-xs-12 col-pd">
+                                                    <div class="form-group" >
+                                                        <div class="radio rad-sec">
+                                                            <label class="pull-left"><input type="radio" ng-model="contactus.enquiryFor" ng-value="'PP/PE Liners'" name="optradio" class="" required>PP/PE Liners</label>
+                                                            <label class="pull-right lbl2"><input type="radio" ng-model="contactus.enquiryFor" ng-value="'POF Shrink Film'" name="optradio" class="" required>POF Shrink Film</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-xs-12 col-pd">
+                                                    <div class="form-group">
+                                                        <div class="radio rad-sec">
+                                                            <label class="pull-left"><input type="radio" ng-model="contactus.enquiryFor" ng-value="'PET Bottles'" name="optradio" class="" required>PET Bottles</label>
+                                                            <label class="pull-right lbl2"><input type="radio" ng-model="contactus.enquiryFor" ng-value="'Speciality Films'" name="optradio" class="" required>Speciality Films</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-8 col-md-offset-2">
+                                                    <div class="form-group">
+                                                        <input type="text-area" ng-model="contactus.message" class="form-control" id="message" placeholder="Message" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="submit-sec text-center">
+                                                <button type="submit" class="btn btn-default sub-btn" >Submit</button>
+                                            </div>
+                                        </form>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

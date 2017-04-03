@@ -1,0 +1,257 @@
+<section>
+  <div class="home-slider">
+
+    <flex-slider  flex-slide="s in mySlides track by $index" prev-text="" next-text="" manual-controls=".custom-pagination li" slideshow-Speed= "3000" class="hidden-xs" direction-Nav= "false">
+        <li>
+            <a ui-sref="{{s.link}}"><img ng-src="{{s.img}}" class="img-responsive ban-full"></a>
+
+        </li>
+    </flex-slider>
+
+    <flex-slider  flex-slide="s in mySlidesmobile track by $index" prev-text="" next-text="" manual-controls=".custom-pagination li" slideshow-Speed= "3000" class="visible-xs" direction-Nav= "false">
+        <li>
+            <a ui-sref="{{s.link}}"><img ng-src="{{s.img}}" class="img-responsive ban-full"></a>
+
+        </li>
+    </flex-slider>
+
+    <!-- <flex-slider  ng-if="!secondTab" flex-slide="s in mySlides track by $index" prev-text="" next-text="" manual-controls=".custom-pagination li" >
+        <li>
+            <a ui-sref="{{s.link}}"><img ng-src="{{s.img}}" class="img-responsive ban-full"></a>
+
+        </li>
+    </flex-slider>
+    <flex-slider  ng-if="secondTab" flex-slide="s in mySlides2 track by $index" prev-text="" next-text="" manual-controls=".custom-pagination li" >
+        <li ng-if="!secondTab">
+            <a ui-sref="{{s.link}}"><img ng-src="{{s.img}}" class="img-responsive ban-full"></a>
+
+        </li>
+        <li ng-if="secondTab">
+            <a ui-sref="{{s.link}}"><img ng-src="{{s.img}}" class="img-responsive ban-full"></a>
+        </li>
+    </flex-slider> -->
+
+    <div class="slider-nav">
+      <div class="al-list text-center">
+        <ul class="text-up custom-pagination">
+        <li ng-click="clickMe1();">
+            <a>POF Shrink Films</a>
+          </li>
+          <li ng-click="clickMe2();" >
+            <a>Speciality Films</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="al-title text-center mtop-btm">
+        <h1 class="text-up color-red font-bold font-keem ft-40">products</h1>
+      </div>
+      <div class="side-pad ">
+        <div class="col-md-6 col-xs-12 padding0">
+          <div class="pr-box img-animated" ui-sref="flexible">
+            <img src="img/Flexible.jpg" alt="" class="img-responsive width100 hover-sec">
+            <div class="over-text">
+              <h2 class="text-up text-center color-white font-bold">FLEXIBLE</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xs-12 padding0">
+          <div class="pr-box img-animated" ui-sref="pet">
+            <img src="img/rigid-photo.jpg" alt="" class="img-responsive width100 hover-sec">
+            <div class="over-text">
+              <h2 class="text-up text-center color-white font-bold">RIGID</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="count">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="bg-red al-list text-center">
+            <ul class="col-black">
+              <li>
+                <div class="count-box">
+                  <strong>serving</strong>
+                  <h4>23</h4>
+              <strong>industries</strong>
+                </div>
+              </li>
+              <li>
+                <div class="count-box">
+                  <strong>PROCESSING</strong>
+                  <h4>10000</h4>
+              <strong>MT POLYMER/YEAR</strong>
+                </div>
+              </li>
+              <li>
+                <div class="count-box">
+                  <strong>Using</strong>
+                  <h4>3</h4>
+              <strong>TECHNOLOGIES</strong>
+                </div>
+              </li>
+              <li>
+                <div class="count-box">
+                  <strong>Over</strong>
+                  <h4>200</h4>
+              <strong>EMPLOYEES</strong>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="cl-section">
+  <div class="container">
+    <div class="row">
+      <div class="al-title text-center">
+        <h1 class="text-up color-red font-bold font-keem ft-40">clients</h1>
+      </div>
+      <div class="col-md-12 zeropd">
+        <div class="client">
+          <flex-slider flex-slide="item in client track by $index" animation="slide" item-width="230" item-margin="5" animationloop="true" move="1" slideshow-Speed="2000">
+              <li>
+                <div class="cl-box">
+                    <img src="{{item}}" alt="">
+                </div>
+              </li>
+          </flex-slider>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="jr-bg">
+    <div class="container">
+      <div class="row">
+        <div class="jr-title">
+          <h1 class="text-up color-red margin0 font-revelution ">alpha's</h1>
+          <h1 class="text-up color-red margin0 font-revelution ">journey</h1>
+        </div>
+        <div class="pt90">
+          <div class="col-md-4">
+            <div class="j2">
+              <div class="jr2-text display-inline">
+                <h4 class="color-red year-r font-norica">2016</h4>
+                <p class="desc">
+  Diversified to manufacture Mulch Film</p>
+              </div>
+            <div class="display-inline jr2-img">
+                  <img src="img/journey/2016.png" alt="" class="img-responsive">
+            </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="j2">
+              <div class="jr2-text display-inline">
+                <h4 class="color-red year-r font-norica">2015</h4>
+                <p class="desc">
+  Diversified to manufacture Collation Shrink Film</p>
+              </div>
+            <div class="display-inline jr2-img">
+                <img src="img/journey/2015.png" alt="">
+            </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="j2">
+              <div class="jr2-text display-inline">
+                <h4 class="color-red year-r font-norica">2013</h4>
+                <p class="desc">
+   Became India’s largest POF Shrink Film manufacturer (3,600 MT/year)</p>
+              </div>
+              <div class="jr2-img">
+
+      <img src="img/journey/images.png" alt="" class="img-responsive">
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-md-2">
+          <div class="j4 j3">
+            <div class="display-inline">
+              <img src="img/j4.png" alt="" class="img-responsive">
+            </div>
+            <div class="jr4-text display-inline" >
+              <h4 class="color-red year-r font-norica">2013</h4>
+              <p class="desc">Became India’s largest POF Shrink Film manufacturer (3,600 MT/year)</p>
+            </div>
+          </div>
+
+        </div> -->
+
+      </div>
+      <div class="text-center over-fl mt-105">
+        <button type="button" name="button" class="text-up btn-red font-roboto" ui-sref="journey">view journey</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="news-bg">
+    <div class="ribbon-red hidden-xs">
+      <img src="img/black-ribbon.png" alt="">
+    </div>
+    <div class="news-slider">
+      <div class="container">
+        <div class="row">
+      <div class="col-md-12">
+        <div class="text-center">
+          <h1 class="text-up color-white font-bold font-revelution ft-40">LATEST NEWS</h1>
+        </div>
+        <div class="nw-slider ">
+        <flex-slider flex-slide="item in news track by $index" animation="slide" item-width="320" item-margin="60" animationloop="true" move="1" slideshow-Speed="2000">
+        <li>
+          <div class="nw-box" ui-sref="news-detail({id:item.id})">
+            <div class="al-relative img-animated">
+              <img ng-src="{{item.img}}" alt="" class="hover-sec">
+              <div class="date-sec">{{item.date}}</div>
+            </div>
+            <div class="nw-title">
+              <p class="color-white text-cap">{{item.title}}</p>
+            </div>
+            <div class="nw-link">
+              <a ui-sref="news-detail({id:item.id})" class="">Read more</a>
+            </div>
+          </div>
+        </li>
+        </flex-slider>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+<section>
+  <div class="map al-relative">
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4457.06591579484!2d72.76595935090985!3d21.153706937399495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e510c7130eb%3A0x35506354c4ef7dea!2sAlpha+Plastomers!5e0!3m2!1sen!2sin!4v1482304925785" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3459.3235046557306!2d77.8134780151113!3d29.883777781941134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDUzJzAxLjYiTiA3N8KwNDgnNTYuNCJF!5e0!3m2!1sen!2sin!4v1484388374681" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.055452974861!2d72.76811192697093!3d21.153009642259363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e510c7130eb%3A0x35506354c4ef7dea!2sAlpha+Plastomers!5e0!3m2!1sen!2sin!4v1484894956712" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  <div class="add">
+    <h4 class="color-red font-bold font-keem text-up">Alpha Plastomers</h4>
+    <i class="fa fa-phone"> <span>+91 72019 89000</span></i> <br>
+    <i class="fa fa-envelope"> <span>info@alpha.co.in</span></i> <br>
+    <i class="fa fa-home"> <span class="main-add">506, Union Heights, <br> Beside Rahulraj Mall, Vesu <br> Surat-395 007, Gujarat, INDIA</span></i>
+  </div>
+</div>
+  </div>
+</section>
