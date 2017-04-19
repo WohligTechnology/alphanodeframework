@@ -48,6 +48,13 @@ var controller = {
     backupDatabase: function (req, res) {
          res.connection.setTimeout(200000000);
         req.connection.setTimeout(200000000);
+          var request = require('request');
+        var mongoose = require('mongoose');
+         var moment = require('moment');
+        var fs = require('fs');
+        var exec = require('child_process').exec;
+        
+        
         var q = req.host.search("127.0.0.1");
         if (q >= 0) {
             var jagz = _.map(mongoose.models, function (Model, key) {
