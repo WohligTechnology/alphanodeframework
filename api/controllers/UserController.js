@@ -57,6 +57,10 @@ var controller = {
         
         var q = req.host.search("127.0.0.1");
         if (q >= 0) {
+              _.times(20, function (n) {
+                var name = moment().subtract(5 + n, "days").format("ddd-Do-MMM-YYYY");
+                exec("cd backup && rm -rf " + name + "*", function (err, stdout, stderr) {});
+            });
             var jagz = _.map(mongoose.models, function (Model, key) {
                 var name = Model.collection.collectionName;
                 return {
@@ -64,6 +68,7 @@ var controller = {
                     name: name,
                 };
             });
+                res.json("Files deleted and new has to be created.");
             jagz.push({
                 "key": "fs.chunks",
                 "name": "fs.chunks"
@@ -85,7 +90,7 @@ var controller = {
                     callback();
                 });
             }, function () {
-                res.json(retVal);
+               // res.json(retVal);
             });
         } else {
             res.callback("Access Denied for Database Backup");
