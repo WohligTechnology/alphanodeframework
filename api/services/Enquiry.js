@@ -4,7 +4,7 @@ var schema = new Schema({
     name: String,
     mobile: String,
     email:  String,
-     enquiryFor: String,
+    enquiryFor: String,
     message: String
 });
 

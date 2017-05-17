@@ -46,7 +46,7 @@
 
         {
             "name": "Message",
-            "type": "text",
+            "type": "textarea",
             "tableRef": "message",
             "placeholder": "Enter Message",
             "id": "message",

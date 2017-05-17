@@ -5,23 +5,25 @@
     "sendIdWithCreate": true,
     "urlFields": ["_id"],
     "fields": [{
-        "name": "Name",
-        "isSort": "",
-        "tableRef": "name"
-    }, {
-        "name": "Email",
-        "isSort": "",
-        "tableRef": "email"
-    }, {
-        "name": "Mobile",
-        "isSort": "",
-        "tableRef": "mobile"
-    },
-    {
-        "name": "Message",
-        "isSort": "",
-        "tableRef": "message"
-    }],
+            "name": "Name",
+            "isSort": "",
+            "tableRef": "name"
+        }, {
+            "name": "Email",
+            "isSort": "",
+            "tableRef": "email"
+        }, {
+            "name": "Mobile",
+            "isSort": "",
+            "tableRef": "mobile"
+        },
+        {
+            "name": "Date:Time",
+            "isSort": "",
+            "tableRef": "createdAt",
+            "type": "date"
+        }
+    ],
     "action": [{
         "name": "edit",
         "icon": "fa-pencil",
@@ -44,7 +46,7 @@
             "value": "_id"
         }
     }],
-    "button": [ {
+    "button": [{
         "name": "Create",
         "icon": "plus",
         "class": "btn-success",

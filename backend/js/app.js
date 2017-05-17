@@ -99,7 +99,7 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
             templateUrl: "views/template.html",
             controller: 'CollationDetailCtrl'
         })
-        
+
         .state('agriculturalpage', {
             url: "/page/:id/{page:.*}/{keyword:.*}",
             templateUrl: "views/template.html",
@@ -708,7 +708,8 @@ firstapp.directive('viewField', function ($http, $filter) {
             } else {
                 $scope.form.model = $scope.value[$scope.type.tableRef];
             }
-
+            if ($scope.type.type == 'date')
+                console.log("type: ", $scope.type.type);
             $scope.template = "views/viewField/" + $scope.type.type + ".html";
         }
     };

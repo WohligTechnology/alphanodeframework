@@ -368,17 +368,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         $scope.saveData = function (formData) {
             console.log("in edit clicked");
-            
-            _.each($scope.json.json.fields, function(n){
-                if(n.type == "tags" && n.dropDownType == "multiple"){
+
+            _.each($scope.json.json.fields, function (n) {
+                if (n.type == "tags" && n.dropDownType == "multiple") {
                     console.log(formData[n.tableRef]);
                     $scope.newTags = [];
-                    _.each(formData[n.tableRef], function(m){
+                    _.each(formData[n.tableRef], function (m) {
                         $scope.newTags.push(m._id);
                     })
                     console.log($scope.newTags);
                     formData[n.tableRef] = $scope.newTags;
-                    
+
                 }
             })
             NavigationService.apiCall($scope.json.json.apiCall.url, formData, function (data) {
@@ -2171,7 +2171,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             //console.log("DATA", result);
             newinfo = {};
             newinfo._id = $scope.json.keyword._id,
-            newinfo.testi_id = id;
+                newinfo.testi_id = id;
             newinfo.name = name;
             newinfo.cname = cname;
             newinfo.city = city;
@@ -2595,7 +2595,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             newinfo = {};
 
             newinfo._id = $scope.json.keyword._id,
-            newinfo.testi_id = id;
+                newinfo.testi_id = id;
             newinfo.name = name;
             newinfo.cname = cname;
             newinfo.city = city;
