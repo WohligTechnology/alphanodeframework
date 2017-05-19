@@ -26,8 +26,8 @@ var model = {
             } else {
 
                 var emailData = {};
-                emailData.email = "pratik.gawand@wohlig.com";
-                emailData.cc = "pratik.gawand@wohlig.com";
+                emailData.email = "aditya.ghag@wohlig.com";
+                emailData.cc = "aditya.ghag@wohlig.com";
                 emailData.content = data;
                 emailData.filename = "enquiryemailer.ejs";
                 emailData.subject = "Alpha Enquiry";
