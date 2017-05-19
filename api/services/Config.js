@@ -5,8 +5,8 @@
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
-var requrl = "http://localhost:80/api/";
-// var requrl = "http://alpha.tingdom.in/api/";
+// var requrl = "http://localhost:80/api/";
+var requrl = "http://alpha.tingdom.in/api/";
 var MaxImageSize = 1600;
 
 
