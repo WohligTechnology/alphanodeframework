@@ -23,7 +23,7 @@
         "name": "edit",
         "icon": "fa-pencil",
         "buttonClass": "btn-primary",
-        "type": "shrinkpage",
+        "type": "page",
         "action": "editShrinkFilm",
         "fieldsToSend": {
             "_id": "_id"

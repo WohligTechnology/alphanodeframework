@@ -23,7 +23,7 @@
         "name": "edit",
         "icon": "fa-pencil",
         "buttonClass": "btn-primary",
-        "type": "bottlespage",
+        "type": "page",
         "action": "editBottles",
         "fieldsToSend": {
             "_id": "_id"

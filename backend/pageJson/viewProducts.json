@@ -23,7 +23,7 @@
         "name": "edit",
         "icon": "fa-pencil",
         "buttonClass": "btn-primary",
-        "type": "productspage",
+        "type": "page",
         "action": "editProducts",
         "fieldsToSend": {
             "_id": "_id"
